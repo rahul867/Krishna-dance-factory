@@ -1,0 +1,12 @@
+.kdf-logo {
+  display: block;
+  width: auto;
+  height: 48px;
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  .kdf-logo {
+    height: 42px;
+  }
+}
