@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Salsa &amp; Bachata Classes in Gurugram | Krishna Dance Factory</title>
 <meta name="description" content="Learn Salsa & Bachata at Krishna Dance Factory, Sector 53, Gurugram. Evening & weekend batches for working professionals. No partner needed. Book a free trial class — call 095993 53649.">
-<link rel="icon" href="../images/kdf-logo.png">
+<link rel="icon" href="../images/landing/kdf-logo-new.png">
 <meta property="og:title" content="Salsa & Bachata Classes in Gurugram | Krishna Dance Factory">
 <meta property="og:description" content="No partner needed. Beginner-friendly Salsa & Bachata classes near Golf Course Road. Book a free trial.">
-<meta property="og:image" content="https://krishnadancefactory.in/images/img-class-bachata.jpg">
+<meta property="og:image" content="https://krishnadancefactory.in/images/landing/hero.jpg">
 <meta property="og:url" content="https://krishnadancefactory.in/salsa-bachata/">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
@@ -49,7 +49,7 @@
   .topbar .call-btn { background: var(--gold); color: #1a1400; font-weight: 700; padding: 10px 18px; border-radius: 999px; text-decoration: none; font-size: .95rem; white-space: nowrap; }
 
   .hero { position: relative; min-height: 88svh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
-  .hero-bg { position: absolute; inset: 0; background: url('../images/img-class-bachata.jpg') center/cover no-repeat; }
+  .hero-bg { position: absolute; inset: 0; background: url('../images/landing/hero.jpg') center/cover no-repeat; }
   .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,13,15,.72), rgba(13,13,15,.88)); }
   .hero-content { position: relative; z-index: 2; padding: 60px 22px; max-width: 720px; }
   .hero-content .eyebrow { color: var(--gold); letter-spacing: 3px; text-transform: uppercase; font-size: .8rem; font-weight: 600; margin-bottom: 14px; }
@@ -82,6 +82,10 @@
   .style-card p { color: var(--muted); font-size: .92rem; }
   @media (max-width: 640px) { .styles-grid { grid-template-columns: 1fr; } }
 
+  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .gallery img { width: 100%; height: 280px; object-fit: cover; border-radius: 14px; border: 1px solid rgba(212,169,66,.2); }
+  @media (max-width: 640px) { .gallery { grid-template-columns: repeat(2, 1fr); } .gallery img { height: 200px; } }
+
   .steps { counter-reset: step; display: grid; gap: 16px; max-width: 620px; margin: 0 auto; }
   .step { display: flex; gap: 16px; align-items: flex-start; background: var(--dark2); border-radius: 14px; padding: 18px 20px; border: 1px solid rgba(212,169,66,.18); }
   .step::before { counter-increment: step; content: counter(step); flex: 0 0 38px; height: 38px; border-radius: 50%; background: var(--gold); color: #1a1400; font-weight: 800; display: flex; align-items: center; justify-content: center; }
@@ -111,7 +115,7 @@
 <body>
 
 <header class="topbar">
-  <img src="../images/kdf-logo.png" alt="Krishna Dance Factory logo">
+  <img src="../images/landing/kdf-logo-new.png" alt="Krishna Dance Factory logo">
   <a class="call-btn" href="tel:+919599353649">📞 Call Now</a>
 </header>
 
@@ -150,15 +154,26 @@
   <p class="sub">Two of the world's most loved social dances</p>
   <div class="styles-grid">
     <div class="style-card">
-      <div class="bg" style="background-image:url('../images/img-class-bachata.jpg')"></div>
+      <div class="bg" style="background-image:url('../images/landing/bachata.jpg')"></div>
       <div class="shade"></div>
       <div class="info"><h3>Bachata</h3><p>Smooth, sensual and easy to start — the most beginner-friendly partner dance. From basic steps to body movement and turns.</p></div>
     </div>
     <div class="style-card">
-      <div class="bg" style="background-image:url('../images/img-carousel-1.jpg')"></div>
+      <div class="bg" style="background-image:url('../images/landing/salsa.jpg')"></div>
       <div class="shade"></div>
       <div class="info"><h3>Salsa</h3><p>Energetic, joyful and social. Learn timing, footwork, partner work and spins — and own any dance floor.</p></div>
     </div>
+  </div>
+</section>
+
+<section>
+  <h2>This Could Be Your Weekend</h2>
+  <p class="sub">Real classes, real socials, real people — straight from our dance floor</p>
+  <div class="gallery">
+    <img src="../images/landing/social-1.jpg" alt="Social dance night at Krishna Dance Factory" loading="lazy">
+    <img src="../images/landing/social-2.jpg" alt="Packed social dance floor" loading="lazy">
+    <img src="../images/landing/social-3.jpg" alt="Salsa performance" loading="lazy">
+    <img src="../images/landing/social-4.jpg" alt="Bachata social dancing" loading="lazy">
   </div>
 </section>
 
