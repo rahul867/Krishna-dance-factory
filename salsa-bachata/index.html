@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salsa &amp; Bachata Classes in Gurugram | Krishna Dance Factory</title>
-<meta name="description" content="Learn Salsa & Bachata at Krishna Dance Factory, Sector 53, Gurugram. Evening & weekend batches for working professionals. No partner needed. Book a free trial class — call 095993 53649.">
+<title>Salsa &amp; Bachata Classes in Gurgaon — Sector 53 | KDF</title>
+<meta name="description" content="Beginner-friendly Salsa & Bachata classes in Gurgaon at Krishna Dance Factory, Sector 53, DLF Phase 5. Weekend batches near Golf Course Road. No partner needed. Check free-trial availability.">
+<link rel="canonical" href="https://krishnadancefactory.in/salsa-bachata/">
 <link rel="icon" href="../images/landing/kdf-logo-new.png">
-<meta property="og:title" content="Salsa & Bachata Classes in Gurugram | Krishna Dance Factory">
-<meta property="og:description" content="No partner needed. Beginner-friendly Salsa & Bachata classes near Golf Course Road. Book a free trial.">
+<meta property="og:title" content="Salsa & Bachata Classes in Gurgaon — Sector 53">
+<meta property="og:description" content="Weekend Salsa & Bachata classes near Golf Course Road. Beginner-friendly, no partner needed. Check limited free-trial availability.">
 <meta property="og:image" content="https://krishnadancefactory.in/images/landing/hero.jpg">
 <meta property="og:url" content="https://krishnadancefactory.in/salsa-bachata/">
 <meta property="og:type" content="website">
@@ -16,16 +17,28 @@
   "@context": "https://schema.org",
   "@type": "DanceSchool",
   "name": "Krishna Dance Factory",
-  "image": "https://krishnadancefactory.in/images/kdf-logo.png",
+  "image": "https://krishnadancefactory.in/images/landing/kdf-logo-new.png",
   "url": "https://krishnadancefactory.in/salsa-bachata/",
   "telephone": "+919599353649",
+  "email": "krishnachoreographer@gmail.com",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "DLF Exclusive Floors, D4/4, Club Drive, Phase 5, Sector 53",
     "addressLocality": "Gurugram",
     "addressRegion": "Haryana",
-    "streetAddress": "DLF Phase 5, Sector 53",
+    "postalCode": "122009",
     "addressCountry": "IN"
   },
+  "areaServed": [
+    { "@type": "City", "name": "Gurgaon" },
+    { "@type": "Place", "name": "Sector 53" },
+    { "@type": "Place", "name": "DLF Phase 5" },
+    { "@type": "Place", "name": "Golf Course Road" }
+  ],
+  "hasMap": "https://share.google/UefStw4itrTwEu1Ay",
+  "sameAs": [
+    "https://www.instagram.com/krishnachoreographer"
+  ],
   "priceRange": "₹₹"
 }
 </script>
@@ -56,6 +69,7 @@
   .hero-content h1 { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.15; font-weight: 800; margin-bottom: 18px; }
   .hero-content h1 span { color: var(--gold); }
   .hero-content p { color: var(--muted); font-size: 1.08rem; margin-bottom: 30px; }
+  .availability-note { color: var(--gold); font-size: .88rem; font-weight: 600; margin-top: 16px; }
   .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
   .btn { display: inline-block; padding: 15px 30px; border-radius: 999px; font-weight: 700; font-size: 1.05rem; text-decoration: none; }
   .btn-primary { background: var(--gold); color: #1a1400; }
@@ -67,11 +81,27 @@
   h2 { font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 8px; text-align: center; }
   .sub { color: var(--muted); text-align: center; margin-bottom: 40px; }
 
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; }
   .card { background: var(--dark2); border: 1px solid rgba(212,169,66,.18); border-radius: 16px; padding: 26px; }
   .card .icon { font-size: 1.8rem; margin-bottom: 12px; }
   .card h3 { color: var(--gold); margin-bottom: 8px; font-size: 1.1rem; }
   .card p { color: var(--muted); font-size: .95rem; }
+
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .review-card { display: flex; flex-direction: column; background: var(--dark2); border: 1px solid rgba(212,169,66,.24); border-radius: 16px; padding: 24px; }
+  .review-stars { color: var(--gold); letter-spacing: 2px; font-size: 1rem; margin-bottom: 14px; }
+  .review-card blockquote { color: var(--text); font-size: .96rem; line-height: 1.7; flex: 1; }
+  .review-meta { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(212,169,66,.15); }
+  .review-name { color: var(--gold); font-weight: 700; }
+  .review-source { display: block; color: var(--muted); font-size: .8rem; margin-top: 2px; }
+  .reviews-cta { text-align: center; margin-top: 28px; }
+  @media (min-width: 701px) {
+    .reviews-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .review-card { grid-column: span 2; }
+    .review-card:nth-last-child(2) { grid-column: 2 / span 2; }
+    .review-card:last-child { grid-column: 4 / span 2; }
+  }
+  @media (max-width: 700px) { .reviews-grid { grid-template-columns: 1fr; } }
 
   .styles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .style-card { position: relative; border-radius: 16px; overflow: hidden; min-height: 300px; display: flex; align-items: flex-end; }
@@ -99,8 +129,18 @@
   .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; text-align: center; }
   .info-grid h3 { color: var(--gold); font-size: 1rem; margin-bottom: 6px; }
   .info-grid p { color: var(--muted); font-size: .95rem; }
+  .local-intro { max-width: 760px; margin: -20px auto 36px; color: var(--muted); text-align: center; }
   .map-wrap { margin-top: 34px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(212,169,66,.2); }
   .map-wrap iframe { width: 100%; height: 320px; border: 0; display: block; }
+  .directions { text-align: center; margin-top: 24px; }
+
+  .faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
+  .faq { background: var(--dark2); border: 1px solid rgba(212,169,66,.18); border-radius: 14px; padding: 0 20px; }
+  .faq summary { cursor: pointer; color: var(--text); font-weight: 700; padding: 18px 32px 18px 0; position: relative; list-style: none; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 0; color: var(--gold); font-size: 1.35rem; line-height: 1; }
+  .faq[open] summary::after { content: "−"; }
+  .faq p { color: var(--muted); padding: 0 0 18px; }
 
   footer { text-align: center; padding: 30px 20px 110px; color: var(--muted); font-size: .85rem; border-top: 1px solid rgba(212,169,66,.15); }
   footer a { color: var(--gold); text-decoration: none; }
@@ -123,17 +163,18 @@
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="eyebrow">Krishna Dance Factory · Sector 53, Gurugram</div>
-    <h1>Learn <span>Salsa &amp; Bachata</span> — No Partner Needed</h1>
-    <p>Beginner-friendly Latin dance classes for working professionals. Evening &amp; weekend batches near Golf Course Road.</p>
+    <div class="eyebrow">Weekend Dance Classes · Sector 53, Gurugram</div>
+    <h1><span>Salsa &amp; Bachata Classes in Gurgaon</span> — Sector 53</h1>
+    <p>Beginner-friendly weekend classes for working professionals in DLF Phase 5, near Golf Course Road. Come solo — no partner or prior experience needed.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="tel:+919599353649">Call Now</a>
-      <a class="btn btn-outline" href="https://wa.me/919599353649?text=Hi%2C%20I%20want%20to%20book%20a%20free%20trial%20class%20for%20Salsa%2FBachata" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a class="btn btn-primary" href="https://wa.me/919599353649?text=Hi%2C%20I%20want%20to%20check%20availability%20for%20a%20free%20Salsa%2FBachata%20trial%20in%20a%20weekend%20batch%20at%20Sector%2053." target="_blank" rel="noopener">Check Free Trial Availability</a>
+      <a class="btn btn-outline" href="tel:+919599353649">Call Now</a>
     </div>
+    <div class="availability-note">Limited free-trial slots per weekend batch</div>
     <div class="hero-badges">
       <span>No Partner Needed</span>
       <span>Beginner Friendly</span>
-      <span>Evening Batches</span>
+      <span>Weekend Batches</span>
     </div>
   </div>
 </div>
@@ -142,11 +183,44 @@
   <h2>Made for Busy Professionals</h2>
   <p class="sub">Long day at work? This is the best hour of it.</p>
   <div class="cards">
-    <div class="card"><div class="icon">🕖</div><h3>Dance After Work</h3><p>Evening &amp; weekend batches designed around office hours. Walk in after work, leave lighter.</p></div>
+    <div class="card"><div class="icon">🗓️</div><h3>Weekend Batches</h3><p>Step away from the workweek and spend your weekend learning, moving and meeting new people.</p></div>
     <div class="card"><div class="icon">🙌</div><h3>No Partner? No Problem</h3><p>Come solo — we rotate partners in class, so you learn to dance with everyone.</p></div>
     <div class="card"><div class="icon">🎓</div><h3>True Beginners Welcome</h3><p>Never danced before? Our step-by-step method gets you social-floor-ready in weeks.</p></div>
     <div class="card"><div class="icon">🥂</div><h3>Meet New People</h3><p>Small batches, weekend socials, and a warm community of professionals like you.</p></div>
   </div>
+</section>
+
+<section>
+  <h2>What Gurgaon Dancers Say</h2>
+  <p class="sub">Real feedback from people who trained with Krishna Dance Factory</p>
+  <div class="reviews-grid">
+    <article class="review-card">
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <blockquote>“Was searching for bachata classes in Gurgaon for months and finally found the perfect place.. The vibe is super welcoming. And Krishna teaches so well... Such a great dancer he is...”</blockquote>
+      <div class="review-meta"><div class="review-name">Jyoti Rana</div><a class="review-source" href="https://share.google/UefStw4itrTwEu1Ay" target="_blank" rel="noopener">Source: Google Reviews</a></div>
+    </article>
+    <article class="review-card">
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <blockquote>“Krishna is a great performer, trainer and dance artist. I’m sure that if you guys join his classes you will see the big differences in your current skill, and he will help you improve your techniques, postures and sense of rhythm from the scratch to the advance level.”</blockquote>
+      <div class="review-meta"><div class="review-name">Amir Safir</div><a class="review-source" href="https://share.google/UefStw4itrTwEu1Ay" target="_blank" rel="noopener">Source: Google Reviews</a></div>
+    </article>
+    <article class="review-card">
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <blockquote>“The best classes to learn latin dance with the best instructor. The vibe is amazing and Krishna pays a lot of attention to techniques and details. Highly recommended!!”</blockquote>
+      <div class="review-meta"><div class="review-name">tanuja1217 shukla</div><a class="review-source" href="https://share.google/UefStw4itrTwEu1Ay" target="_blank" rel="noopener">Source: Google Reviews</a></div>
+    </article>
+    <article class="review-card">
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <blockquote>“If you're looking to learn bachata, this is the perfect place! The instructors are excellent, the environment is fun and motivating, and each class is planned really well. I've improved so much while having an incredible time. Highly recommended!”</blockquote>
+      <div class="review-meta"><div class="review-name">Neha Kanade</div><a class="review-source" href="https://share.google/UefStw4itrTwEu1Ay" target="_blank" rel="noopener">Source: Google Reviews</a></div>
+    </article>
+    <article class="review-card">
+      <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+      <blockquote>“Fantastic place to learn bachata! Great instructors, positive vibes, and well-structured classes. I've learned so much while having a great time. Highly recommended!”</blockquote>
+      <div class="review-meta"><div class="review-name">Jai Kanade</div><a class="review-source" href="https://share.google/UefStw4itrTwEu1Ay" target="_blank" rel="noopener">Source: Google Reviews</a></div>
+    </article>
+  </div>
+  <div class="reviews-cta"><a class="btn btn-outline" href="https://share.google/UefStw4itrTwEu1Ay" target="_blank" rel="noopener">View All Reviews on Google</a></div>
 </section>
 
 <section>
@@ -181,7 +255,7 @@
   <h2>How It Works</h2>
   <p class="sub">From zero to dancing in 3 simple steps</p>
   <div class="steps">
-    <div class="step"><p><strong>Book your free trial class</strong>Call or WhatsApp us — we'll fit you into an evening or weekend batch.</p></div>
+    <div class="step"><p><strong>Check trial availability</strong>Call or WhatsApp us to find an open trial slot in the next weekend batch.</p></div>
     <div class="step"><p><strong>Attend &amp; experience it</strong>One hour of music, movement and fun. No pressure, no commitment.</p></div>
     <div class="step"><p><strong>Join a batch</strong>Loved it? Pick a schedule that fits your work life and start your journey.</p></div>
   </div>
@@ -189,27 +263,42 @@
 
 <section>
   <div class="cta-band">
-    <h2>First Class Is On Us</h2>
-    <p>Try a full Salsa/Bachata class free. If you don't love it, you owe us nothing.</p>
+    <h2>Limited Free-Trial Slots This Weekend</h2>
+    <p>Each weekend batch has limited trial spots. Message us to check the next available slot.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="tel:+919599353649">Call 095993 53649</a>
-      <a class="btn btn-outline" href="https://wa.me/919599353649?text=Hi%2C%20I%20want%20to%20book%20a%20free%20trial%20class%20for%20Salsa%2FBachata" target="_blank" rel="noopener">Message on WhatsApp</a>
+      <a class="btn btn-outline" href="https://wa.me/919599353649?text=Hi%2C%20I%20want%20to%20check%20availability%20for%20a%20free%20Salsa%2FBachata%20trial%20in%20a%20weekend%20batch%20at%20Sector%2053." target="_blank" rel="noopener">Check Availability on WhatsApp</a>
     </div>
+  </div>
+</section>
+
+<section>
+  <h2>Frequently Asked Questions</h2>
+  <p class="sub">Everything you need to know before your first class</p>
+  <div class="faq-list">
+    <details class="faq"><summary>Can complete beginners join?</summary><p>Yes. The weekend batches are beginner-friendly and start with the fundamentals, so you do not need any previous dance experience.</p></details>
+    <details class="faq"><summary>Do I need to bring a partner?</summary><p>No. You can come solo. Partners rotate during class so everyone gets a chance to learn and practise.</p></details>
+    <details class="faq"><summary>When are the Salsa and Bachata classes held?</summary><p>Classes run in weekend batches. Call or WhatsApp us for the latest Saturday and Sunday time slots.</p></details>
+    <details class="faq"><summary>Is the first trial class free?</summary><p>Yes, subject to availability. Free-trial spots are limited in each weekend batch, so please confirm your slot on WhatsApp before visiting.</p></details>
+    <details class="faq"><summary>What are the class fees?</summary><p>Fees depend on the batch and programme. WhatsApp us and we will share the current fee structure along with available timings.</p></details>
+    <details class="faq"><summary>What should I wear?</summary><p>Wear comfortable clothes that allow easy movement and clean, comfortable footwear suitable for a dance floor.</p></details>
   </div>
 </section>
 
 <section>
   <h2>Find Us</h2>
   <p class="sub">Krishna Dance Factory — DLF Phase 5, Sector 53, Gurugram</p>
+  <p class="local-intro">Convenient for dancers coming from Golf Course Road, DLF Phase 5 and nearby Gurgaon sectors. The studio is located at DLF Exclusive Floors in Sector 53.</p>
   <div class="info-grid">
-    <div><h3>📍 Location</h3><p>DLF Phase 5, Sector 53,<br>near Golf Course Road, Gurugram</p></div>
-    <div><h3>🕐 Batches</h3><p>Evenings (post-office hours)<br>&amp; weekend batches</p></div>
+    <div><h3>📍 Location</h3><p>DLF Exclusive Floors, D4/4, Club Drive,<br>Phase 5, Sector 53, Gurugram 122009</p></div>
+    <div><h3>🕐 Batches</h3><p>Saturday &amp; Sunday<br>Confirm the latest slot on WhatsApp</p></div>
     <div><h3>📞 Contact</h3><p><a href="tel:+919599353649" style="color:var(--gold)">095993 53649</a><br><a href="mailto:krishnachoreographer@gmail.com" style="color:var(--gold)">krishnachoreographer@gmail.com</a></p></div>
   </div>
   <div class="map-wrap">
     <iframe title="Krishna Dance Factory location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
       src="https://www.google.com/maps?q=Krishna%20Dance%20Factory%2C%20DLF%20Phase%205%2C%20Sector%2053%2C%20Gurugram&output=embed"></iframe>
   </div>
+  <div class="directions"><a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=Krishna%20Dance%20Factory%2C%20DLF%20Phase%205%2C%20Sector%2053%2C%20Gurugram" target="_blank" rel="noopener">Get Directions</a></div>
 </section>
 
 <footer>
@@ -218,7 +307,7 @@
 
 <div class="sticky-cta">
   <a class="call" href="tel:+919599353649">📞 Call Now</a>
-  <a class="wa" href="https://wa.me/919599353649?text=Hi%2C%20I%20want%20to%20book%20a%20free%20trial%20class%20for%20Salsa%2FBachata" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="wa" href="https://wa.me/919599353649?text=Hi%2C%20I%20want%20to%20check%20availability%20for%20a%20free%20Salsa%2FBachata%20trial%20in%20a%20weekend%20batch%20at%20Sector%2053." target="_blank" rel="noopener">WhatsApp</a>
 </div>
 
 </body>
