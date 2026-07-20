@@ -243,5 +243,17 @@
   <a class="wa" href="https://wa.me/919599353649?text=Hi%2C%20I%20want%20to%20book%20a%20FREE%20trial%20kids%20dance%20class%20this%20Saturday" target="_blank" rel="noopener">WhatsApp</a>
 </div>
 
+<script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="tel:"], a[href*="wa.me"]');
+    if (!a || typeof gtag !== 'function') return;
+    var isCall = a.getAttribute('href').indexOf('tel:') === 0;
+    gtag('event', isCall ? 'click_call' : 'click_whatsapp', {
+      event_category: 'engagement',
+      event_label: window.location.pathname
+    });
+  });
+</script>
+
 </body>
 </html>
