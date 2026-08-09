@@ -1,41 +1,703 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Krishna Dance Factory — Where Passion Meets Rhythm</title>
-    <meta name="description" content="Learn Bachata, Bollywood, and partner dance in Gurugram. Krishna Dance Factory offers classes for all levels, social nights, workshops, and wedding choreography." />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EC735TX9M"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishna Dance Factory — Only Dance, Nothing Else Matters</title>
+  <meta name="description" content="Krishna Dance Factory — salsa, bachata & choreography studio in DLF Phase 5, Sector 53, Gurugram. Message us for batch timings." />
 
-      gtag('config', 'G-9EC735TX9M');
-    </script>
-    <link rel="icon" type="image/png" href="./images/kdf-logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="./assets/index-kdf-pages-fix.js?v=20260706-fixes"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DLhRhdPz.css">
-    <link rel="stylesheet" href="./assets/kdf-brand.css?v=20260706-fixes">
-  </head>
-  <body>
-    <div id="root"></div>
-    <a href="https://wa.me/919599353649?text=Hi%20Krishna%20Dance%20Factory!%20I%27d%20like%20to%20know%20more%20about%20your%20classes." class="kdf-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-      <svg viewBox="0 0 32 32" width="30" height="30" fill="#fff" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 4 1.6 6.2 1.6 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-2 0-3.9-.6-5.6-1.6l-.4-.2-4.1 1.3 1.3-4-.3-.4c-1.2-1.7-1.9-3.8-1.9-6 0-5.5 4.5-9.9 10-9.9s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
-    </a>
-    <script>
-      document.addEventListener('click', function (e) {
-        var a = e.target.closest('a[href^="tel:"], a[href*="wa.me"]');
-        if (!a || typeof gtag !== 'function') return;
-        var isCall = a.getAttribute('href').indexOf('tel:') === 0;
-        gtag('event', isCall ? 'click_call' : 'click_whatsapp', {
-          event_category: 'engagement',
-          event_label: window.location.pathname
-        });
+  <!-- OG -->
+  <meta property="og:title" content="Krishna Dance Factory — Dance Studio in Gurugram" />
+  <meta property="og:description" content="Salsa, bachata & choreography classes in DLF Phase 5, Gurugram. Small batches, beginners welcome." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+
+  <!-- Google Analytics 4 (carried over from the previous site) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EC735TX9M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9EC735TX9M');
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind, compiled locally. The theme below lives in tailwind.config.js;
+       rebuild with:
+         npx tailwindcss@3 -c tailwind.config.js -i tailwind.input.css -o tailwind.css --minify -->
+  <link rel="stylesheet" href="tailwind.css">
+
+</head>
+
+<body class="font-body text-bone antialiased selection:bg-blood selection:text-white">
+
+  <!-- ============ AMBIENT BACKGROUND ============ -->
+  <div class="bokeh" aria-hidden="true">
+    <span style="width:220px;height:220px;top:6%;left:6%;animation-delay:0s"></span>
+    <span style="width:120px;height:120px;top:22%;left:78%;animation-delay:1.2s"></span>
+    <span style="width:300px;height:300px;top:60%;left:-4%;animation-delay:2.4s"></span>
+    <span style="width:160px;height:160px;top:74%;left:86%;animation-delay:.6s"></span>
+    <span style="width:90px;height:90px;top:44%;left:46%;animation-delay:3s"></span>
+  </div>
+
+  <div class="relative z-10">
+
+    <!-- ============ TOP META BAR ============ -->
+    <div class="hidden md:flex items-center justify-between px-8 py-3 text-[11px] uppercase tracking-widest2 text-ash">
+      <span>Dance Studio</span>
+      <span>DLF Phase 5 · Gurugram</span>
+      <span>Est. 2016</span>
+    </div>
+
+    <!-- ============ NAVBAR ============ -->
+    <header id="nav" class="sticky top-0 z-50 transition-all duration-500">
+      <div class="mx-auto max-w-[1400px] px-5 sm:px-8">
+        <nav class="flex items-center justify-between gap-6 rounded-b-xl py-5">
+
+          <!-- Logo block (red tile, like the mockup) -->
+          <a href="#home" class="flex items-center gap-4 shrink-0">
+            <!-- <div class="bg-blood px-4 py-3 leading-none">
+              <div class="font-cond text-2xl tracking-[.12em] text-white">KDF</div>
+            </div> -->
+            <img src="./logo.jpg" alt="Krishna Dance Factory logo" class="logo">
+            <div class="hidden sm:block leading-tight">
+              <p class="font-display text-[15px] tracking-wide text-bone">Krishna Dance Factory</p>
+              <p class="text-[10px] uppercase tracking-widest2 text-ash mt-1">Salsa · Bachata · Choreography</p>
+            </div>
+          </a>
+
+          <!-- Tagline (mockup has this in the header) -->
+          <!-- <p class="hidden xl:block max-w-xs text-[12px] leading-relaxed text-ash">
+            You can't change the world —<br>but you can make it dance.
+          </p> -->
+
+          <!-- Desktop links -->
+          <ul class="hidden lg:flex items-center gap-9 text-[12px] uppercase tracking-[.18em] text-ash">
+            <li><a href="#about"    class="navlink hover:text-bone transition">About</a></li>
+            <li><a href="#classes"  class="navlink hover:text-bone transition">Classes</a></li>
+            <li><a href="#schedule" class="navlink hover:text-bone transition">Schedule</a></li>
+            <li><a href="#trainers" class="navlink hover:text-bone transition">Trainers</a></li>
+            <li><a href="#contact"  class="navlink hover:text-bone transition">Contact</a></li>
+          </ul>
+
+          <div class="flex items-center gap-3">
+            <a href="#contact" class="btn-red hidden sm:inline-flex items-center px-6 py-3 text-[11px] font-semibold uppercase tracking-[.2em] text-white">
+              Join Us
+            </a>
+            <!-- Mobile toggle -->
+            <button id="burger" aria-label="Open menu" aria-expanded="false" class="lg:hidden grid h-11 w-11 place-items-center border border-white/15">
+              <span class="block h-px w-5 bg-bone transition-all" data-l1></span>
+              <span class="mt-1.5 block h-px w-5 bg-bone transition-all" data-l2></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="lg:hidden hidden border-t border-white/10 bg-ink/95 backdrop-blur-xl">
+        <ul class="px-6 py-6 space-y-1 text-sm uppercase tracking-[.18em] text-ash">
+          <li><a href="#about"    class="block py-3 hover:text-blood transition">About</a></li>
+          <li><a href="#classes"  class="block py-3 hover:text-blood transition">Classes</a></li>
+          <li><a href="#schedule" class="block py-3 hover:text-blood transition">Schedule</a></li>
+          <li><a href="#trainers" class="block py-3 hover:text-blood transition">Trainers</a></li>
+          <li><a href="#contact"  class="block py-3 hover:text-blood transition">Contact</a></li>
+          <li class="pt-4"><a href="#contact" class="btn-red block px-6 py-4 text-center text-[11px] font-semibold tracking-[.2em] text-white">Join KDF</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section id="home" class="mx-auto max-w-[1400px] px-5 sm:px-8 pt-6 pb-24 lg:pb-32">
+      <div class="grid grid-cols-12 gap-4 sm:gap-6 items-center">
+
+        <!-- Left image -->
+        <div class="col-span-6 lg:col-span-3 reveal">
+          <div class="frame h-[280px] sm:h-[380px] lg:h-[460px]">
+            <!-- Swap src with your own studio photo: images/hero-left.jpg -->
+            <img src="./images/hero-01.JPG" alt="Dancer in a red dress mid-turn" loading="eager">
+          </div>
+        </div>
+
+        <!-- Center headline -->
+        <div class="col-span-12 lg:col-span-6 order-first lg:order-none text-center py-8 lg:py-0 reveal">
+          <p class="mb-6 text-[11px] uppercase tracking-widest2 text-blood">Gurugram · Sector 53</p>
+
+          <h1 class="font-display font-black uppercase leading-[0.92] tracking-tight">
+            <span class="block text-[clamp(2.4rem,7vw,5.2rem)] hero-title">Only <span class="text-blood italic">Dance,</span></span>
+            <span class="block text-[clamp(2.4rem,7vw,5.2rem)] hero-title">Nothing Else</span>
+            <span class="block text-[clamp(2.4rem,7vw,5.2rem)] hero-title">Matters!</span>
+          </h1>
+
+          <p class="mx-auto mt-8 max-w-md text-sm leading-relaxed text-ash">
+            Salsa, bachata and choreography for absolute beginners to stage-ready performers.
+            No experience needed — just show up.
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#contact" class="btn-red w-full sm:w-auto px-9 py-4 text-[11px] font-semibold uppercase tracking-[.22em] text-white">
+              Start your journey
+            </a>
+            <a href="#classes" class="btn-ghost w-full sm:w-auto px-9 py-4 text-[11px] font-semibold uppercase tracking-[.22em] text-ash">
+              See classes
+            </a>
+          </div>
+        </div>
+
+        <!-- Right image -->
+        <div class="col-span-6 lg:col-span-3 reveal">
+          <div class="frame h-[280px] sm:h-[380px] lg:h-[460px]">
+            <!-- images/hero-right.jpg -->
+            <img src="./images/hero-02.JPG" alt="Dancer extending an arm under stage light" loading="eager">
+          </div>
+        </div>
+
+        <!-- Bottom row: small centre image + CTA card (mirrors the mockup) -->
+        <div class="col-span-12 lg:col-span-4 mt-6 lg:mt-2 reveal">
+          <div class="border border-white/10 bg-panel/70 p-8 backdrop-blur-sm">
+            <p class="font-display text-xl text-bone">Dance like a star.</p>
+            <p class="mt-3 text-sm leading-relaxed text-ash">
+              Come see a class, meet the floor, and start when you are ready.</p>
+            <a href="#contact" class="btn-red mt-6 inline-flex px-7 py-3 text-[11px] font-semibold uppercase tracking-[.22em] text-white">
+              Sign up
+            </a>
+          </div>
+        </div>
+
+        <div class="col-span-12 lg:col-span-4 mt-2 reveal">
+          <div class="frame h-[250px] lg:h-[300px]">
+            <!-- images/hero-center.jpg -->
+            <img src="./images/star.jpeg" alt="Dancers rehearsing in the studio">
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="col-span-12 lg:col-span-4 mt-2 grid grid-cols-3 gap-4 reveal">
+          <div class="border border-white/10 p-6 text-center">
+            <p class="font-cond text-4xl text-blood" data-count="9">0</p>
+            <p class="mt-2 text-[10px] uppercase tracking-widest2 text-ash">Years</p>
+          </div>
+          <div class="border border-white/10 p-6 text-center">
+            <p class="font-cond text-4xl text-blood"><span data-count="1200">0</span>+</p>
+            <p class="mt-2 text-[10px] uppercase tracking-widest2 text-ash">Students</p>
+          </div>
+          <div class="border border-white/10 p-6 text-center">
+            <p class="font-cond text-4xl text-blood" data-count="12">0</p>
+            <p class="mt-2 text-[10px] uppercase tracking-widest2 text-ash">Styles</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="border-y border-white/10 bg-panel/50 py-5 overflow-hidden">
+      <div class="marquee-track animate-marquee">
+        <div class="flex shrink-0 items-center gap-10 pr-10 font-cond text-2xl uppercase tracking-[.2em] text-ash/70">
+          <span>Salsa</span><span class="text-blood">◆</span>
+          <span>Bachata</span><span class="text-blood">◆</span>
+          <span>Kizomba</span><span class="text-blood">◆</span>
+          <span>Bollywood</span><span class="text-blood">◆</span>
+          <span>Hip Hop</span><span class="text-blood">◆</span>
+          <span>Contemporary</span><span class="text-blood">◆</span>
+          <span>Wedding Choreography</span><span class="text-blood">◆</span>
+        </div>
+        <div class="flex shrink-0 items-center gap-10 pr-10 font-cond text-2xl uppercase tracking-[.2em] text-ash/70" aria-hidden="true">
+          <span>Salsa</span><span class="text-blood">◆</span>
+          <span>Bachata</span><span class="text-blood">◆</span>
+          <span>Kizomba</span><span class="text-blood">◆</span>
+          <span>Bollywood</span><span class="text-blood">◆</span>
+          <span>Hip Hop</span><span class="text-blood">◆</span>
+          <span>Contemporary</span><span class="text-blood">◆</span>
+          <span>Wedding Choreography</span><span class="text-blood">◆</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="mx-auto max-w-[1400px] px-5 sm:px-8 py-24 lg:py-32">
+      <div class="grid gap-14 lg:grid-cols-2 lg:gap-20 items-center">
+        <div class="reveal">
+          <div class="frame lg:h-[625px] sm:h-[505px]">
+            <!-- images/about.jpg -->
+            <img src="./images/about.JPG" alt="Instructor guiding a student through a turn">
+          </div>
+        </div>
+
+        <div class="reveal">
+          <p class="text-[11px] uppercase tracking-widest2 text-blood">About the studio</p>
+          <h2 class="mt-6 font-display text-[clamp(2rem,4.5vw,3.4rem)] font-black uppercase leading-[1.02]">
+            A room where<br><span class="text-blood italic">nobody</span> is watching
+          </h2>
+          <p class="mt-8 text-[15px] leading-relaxed text-ash">
+            Krishna Dance Factory started in a single hall in Gurugram with one rule: you don't need
+            rhythm to begin, you need to begin to find rhythm. Nine years later that rule hasn't moved.
+          </p>
+          <!-- <p class="mt-5 text-[15px] leading-relaxed text-ash">
+            We teach partner Latin — salsa, bachata, kizomba — alongside Bollywood, hip hop and
+            wedding choreography. Small batches, patient instructors, and a floor where beginners
+            outnumber experts every single evening.
+          </p> -->
+
+          <ul class="mt-10 space-y-4">
+            <li class="flex items-start gap-4">
+              <span class="mt-2 h-px w-8 bg-blood shrink-0"></span>
+              <span class="text-sm text-ash"><strong class="text-bone font-medium">Beginner-first batches</strong> — no partner or experience required.</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="mt-2 h-px w-8 bg-blood shrink-0"></span>
+              <span class="text-sm text-ash"><strong class="text-bone font-medium">Max 12 per class</strong> — everyone gets corrected, every session.</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="mt-2 h-px w-8 bg-blood shrink-0"></span>
+              <span class="text-sm text-ash"><strong class="text-bone font-medium">Socials & showcases</strong> — practise what you learn on a real floor.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLASSES ============ -->
+    <section id="classes" class="border-y border-white/10 bg-panel/40 py-24 lg:py-32">
+      <div class="mx-auto max-w-[1400px] px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <p class="text-[11px] uppercase tracking-widest2 text-blood">What we teach</p>
+          <h2 class="mt-6 font-display text-[clamp(2rem,4.5vw,3.4rem)] font-black uppercase leading-[1.02]">
+            Pick your <span class="text-blood italic">floor</span>
+          </h2>
+        </div>
+
+        <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Card -->
+          <article class="group reveal border border-white/10 bg-ink/60 overflow-hidden">
+            <div class="frame h-56"><img src="./images/salsa.jpeg" alt="Salsa class"></div>
+            <div class="p-8">
+              <h3 class="font-display text-2xl">Salsa</h3>
+              <p class="mt-3 text-sm leading-relaxed text-ash">On1 & On2 fundamentals, turn patterns, and social-floor confidence from week one.</p>
+              <p class="mt-6 text-[11px] uppercase tracking-widest2 text-blood">Beginner → Advanced</p>
+            </div>
+          </article>
+
+          <article class="group reveal border border-white/10 bg-ink/60 overflow-hidden">
+            <div class="frame h-56"><img src="./images/bachata.jpg" alt="Bachata class"></div>
+            <div class="p-8">
+              <h3 class="font-display text-2xl">Bachata</h3>
+              <p class="mt-3 text-sm leading-relaxed text-ash">Sensual and dominican styling, body movement, musicality and lead-follow connection.</p>
+              <p class="mt-6 text-[11px] uppercase tracking-widest2 text-blood">Beginner → Advanced</p>
+            </div>
+          </article>
+
+          <article class="group reveal border border-white/10 bg-ink/60 overflow-hidden">
+            <div class="frame h-56"><img src="./images/wedding.jpg" alt="Wedding choreography"></div>
+            <div class="p-8">
+              <h3 class="font-display text-2xl">Wedding Choreo</h3>
+              <p class="mt-3 text-sm leading-relaxed text-ash">Sangeet sets for couples and families — rehearsed, filmed and stage-ready in weeks.</p>
+              <p class="mt-6 text-[11px] uppercase tracking-widest2 text-blood">Custom packages</p>
+            </div>
+          </article>
+
+          <article class="group reveal border border-white/10 bg-ink/60 overflow-hidden">
+            <div class="frame h-56"><img src="./images/bollywood.jpeg" alt="Bollywood class"></div>
+            <div class="p-8">
+              <h3 class="font-display text-2xl">Bollywood</h3>
+              <p class="mt-3 text-sm leading-relaxed text-ash">High-energy film choreography — the fastest way to enjoy dancing before you can dance.</p>
+              <p class="mt-6 text-[11px] uppercase tracking-widest2 text-blood">All levels</p>
+            </div>
+          </article>
+
+          <article class="group reveal border border-white/10 bg-ink/60 overflow-hidden">
+            <div class="frame h-56"><img src="./images/hip-hop.jpeg" alt="Hip hop class"></div>
+            <div class="p-8">
+              <h3 class="font-display text-2xl">Hip Hop</h3>
+              <p class="mt-3 text-sm leading-relaxed text-ash">Grooves, isolations and choreography sets for teens and adults.</p>
+              <p class="mt-6 text-[11px] uppercase tracking-widest2 text-blood">All levels</p>
+            </div>
+          </article>
+
+          <article class="group reveal border border-white/10 bg-blood/90 overflow-hidden">
+            <div class="p-8 h-full flex flex-col justify-between min-h-[22rem]">
+              <div>
+                <h3 class="font-display text-3xl text-white">Not sure<br>where to start?</h3>
+                <p class="mt-4 text-sm leading-relaxed text-white/85">Not sure which style suits you? Message us and we will help you pick.</p>
+              </div>
+              <a href="#contact" class="mt-8 inline-flex w-fit border border-white/60 px-7 py-3 text-[11px] font-semibold uppercase tracking-[.22em] text-white hover:bg-white hover:text-blood transition">
+                Book trial
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCHEDULE ============ -->
+    <section id="schedule" class="mx-auto max-w-[1400px] px-5 sm:px-8 py-24 lg:py-32">
+      <div class="grid gap-14 lg:grid-cols-12 lg:gap-20">
+        <div class="lg:col-span-4 reveal">
+          <p class="text-[11px] uppercase tracking-widest2 text-blood">Timetable</p>
+          <h2 class="mt-6 font-display text-[clamp(2rem,4.5vw,3.4rem)] font-black uppercase leading-[1.02]">
+            Weekly<br><span class="text-blood italic">schedule</span>
+          </h2>
+          <p class="mt-8 text-sm leading-relaxed text-ash">
+            Tap a day to see the batches. Timings shift occasionally — confirm on WhatsApp before your first visit.
+          </p>
+          <a href="https://wa.me/919599353649" target="_blank" rel="noopener"
+             class="btn-ghost mt-8 inline-flex px-7 py-3 text-[11px] font-semibold uppercase tracking-[.22em] text-ash">
+            Confirm on WhatsApp
+          </a>
+        </div>
+
+        <div class="lg:col-span-8 reveal">
+          <div id="accordion" class="divide-y divide-white/10 border-y border-white/10">
+
+            <div class="acc">
+              <button class="acc-head flex w-full items-center justify-between gap-6 py-7 text-left group" aria-expanded="false">
+                <span class="font-display text-xl sm:text-2xl group-hover:text-blood transition">Mon &amp; Wed</span>
+                <span class="hidden sm:block flex-1 text-sm text-ash">Salsa fundamentals · Bachata level 1</span>
+                <span class="acc-icon font-cond text-2xl text-blood transition-transform duration-300">+</span>
+              </button>
+              <div class="acc-body">
+                <ul class="pb-8 space-y-3 text-sm text-ash">
+                  <li class="flex justify-between border-b border-white/5 pb-3"><span>Salsa — Beginner</span><span class="text-bone">7:00 – 8:00 PM</span></li>
+                  <li class="flex justify-between border-b border-white/5 pb-3"><span>Bachata — Level 1</span><span class="text-bone">8:00 – 9:00 PM</span></li>
+                  <li class="flex justify-between"><span>Open practice</span><span class="text-bone">9:00 – 9:45 PM</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="acc">
+              <button class="acc-head flex w-full items-center justify-between gap-6 py-7 text-left group" aria-expanded="false">
+                <span class="font-display text-xl sm:text-2xl group-hover:text-blood transition">Tue &amp; Thu</span>
+                <span class="hidden sm:block flex-1 text-sm text-ash">Bollywood · Hip hop · Kids batch</span>
+                <span class="acc-icon font-cond text-2xl text-blood transition-transform duration-300">+</span>
+              </button>
+              <div class="acc-body">
+                <ul class="pb-8 space-y-3 text-sm text-ash">
+                  <li class="flex justify-between border-b border-white/5 pb-3"><span>Kids (6–12 yrs)</span><span class="text-bone">5:00 – 6:00 PM</span></li>
+                  <li class="flex justify-between border-b border-white/5 pb-3"><span>Bollywood — All levels</span><span class="text-bone">7:00 – 8:00 PM</span></li>
+                  <li class="flex justify-between"><span>Hip hop</span><span class="text-bone">8:00 – 9:00 PM</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="acc">
+              <button class="acc-head flex w-full items-center justify-between gap-6 py-7 text-left group" aria-expanded="false">
+                <span class="font-display text-xl sm:text-2xl group-hover:text-blood transition">Fri</span>
+                <span class="hidden sm:block flex-1 text-sm text-ash">Advanced patterns · Social night</span>
+                <span class="acc-icon font-cond text-2xl text-blood transition-transform duration-300">+</span>
+              </button>
+              <div class="acc-body">
+                <ul class="pb-8 space-y-3 text-sm text-ash">
+                  <li class="flex justify-between border-b border-white/5 pb-3"><span>Salsa — Advanced</span><span class="text-bone">7:00 – 8:15 PM</span></li>
+                  <li class="flex justify-between"><span>Social night (open floor)</span><span class="text-bone">8:30 – 11:00 PM</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="acc">
+              <button class="acc-head flex w-full items-center justify-between gap-6 py-7 text-left group" aria-expanded="false">
+                <span class="font-display text-xl sm:text-2xl group-hover:text-blood transition">Sat &amp; Sun</span>
+                <span class="hidden sm:block flex-1 text-sm text-ash">Workshops · Wedding choreography</span>
+                <span class="acc-icon font-cond text-2xl text-blood transition-transform duration-300">+</span>
+              </button>
+              <div class="acc-body">
+                <ul class="pb-8 space-y-3 text-sm text-ash">
+                  <li class="flex justify-between border-b border-white/5 pb-3"><span>Weekend workshop</span><span class="text-bone">11:00 AM – 1:00 PM</span></li>
+                  <li class="flex justify-between border-b border-white/5 pb-3"><span>Wedding choreo (by booking)</span><span class="text-bone">2:00 – 5:00 PM</span></li>
+                  <li class="flex justify-between"><span>Trial classes</span><span class="text-bone">6:00 – 7:00 PM</span></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRAINERS ============ -->
+    <section id="trainers" class="border-y border-white/10 bg-panel/40 py-24 lg:py-32">
+      <div class="mx-auto max-w-[1400px] px-5 sm:px-8">
+        <div class="flex flex-wrap items-end justify-between gap-6 reveal">
+          <div>
+            <p class="text-[11px] uppercase tracking-widest2 text-blood">The floor</p>
+            <h2 class="mt-6 font-display text-[clamp(2rem,4.5vw,3.4rem)] font-black uppercase leading-[1.02]">
+              Your <span class="text-blood italic">trainer</span>
+            </h2>
+          </div>
+          <p class="max-w-sm text-sm leading-relaxed text-ash">Every class is taught by Krishna himself. Nobody gets handed off to an assistant.</p>
+        </div>
+
+        <div class="mt-16 mx-auto max-w-md">
+          <article class="reveal group">
+            <div class="frame h-[460px]">
+              <img src="./images/krishna.jpg" alt="Krishna, founder and lead choreographer">
+              <div class="absolute bottom-0 left-0 right-0 p-7">
+                <h3 class="font-display text-2xl text-white">Krishna</h3>
+                <p class="mt-1 text-[11px] uppercase tracking-widest2 text-blood">Founder · Lead choreographer</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="mx-auto max-w-[1400px] px-5 sm:px-8 py-24 lg:py-32">
+      <div class="mx-auto max-w-3xl text-center reveal">
+        <p class="text-[11px] uppercase tracking-widest2 text-blood">Students</p>
+        <div id="quotes" class="relative mt-10 min-h-[220px]">
+          <!-- populated by JS -->
+        </div>
+        <div id="dots" class="mt-8 flex justify-center gap-3"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="border-t border-white/10 bg-panel/40 py-24 lg:py-32">
+      <div class="mx-auto max-w-[1400px] px-5 sm:px-8">
+        <div class="grid gap-14 lg:grid-cols-2 lg:gap-20">
+
+          <div class="reveal">
+            <p class="text-[11px] uppercase tracking-widest2 text-blood">Get started</p>
+            <h2 class="mt-6 font-display text-[clamp(2rem,4.5vw,3.4rem)] font-black uppercase leading-[1.02]">
+              Join KDF and<br>start your <span class="text-blood italic">journey</span>
+            </h2>
+            <p class="mt-8 text-sm leading-relaxed text-ash max-w-md">
+              Tell us what you want to learn and when you are free. We will share the
+              current batch timings and answer anything before you visit.
+            </p>
+
+            <div class="mt-12 space-y-7">
+              <div>
+                <p class="text-[10px] uppercase tracking-widest2 text-ash">Studio</p>
+                <p class="mt-2 text-[15px] text-bone">DLF Phase 5, Sector 53, Gurugram, Haryana</p>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase tracking-widest2 text-ash">Phone</p>
+                <a href="tel:+919599353649" class="mt-2 block text-[15px] text-bone hover:text-blood transition">+91 95993 53649</a>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase tracking-widest2 text-ash">Email</p>
+                <a href="mailto:krishnachoreographer@gmail.com" class="mt-2 block text-[15px] text-bone hover:text-blood transition break-all">krishnachoreographer@gmail.com</a>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase tracking-widest2 text-ash">Instagram</p>
+                <a href="https://instagram.com/krishnachoreographer" target="_blank" rel="noopener" class="mt-2 block text-[15px] text-bone hover:text-blood transition">@krishnachoreographer</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <div class="border border-white/10 bg-ink/70 p-8 sm:p-10">
+              <p class="text-[10px] uppercase tracking-widest2 text-ash">Talk to us</p>
+              <h3 class="mt-4 font-display text-2xl text-bone">The quickest way in</h3>
+              <p class="mt-4 text-sm leading-relaxed text-ash">
+                Send us a message or give us a call. We will tell you which batch
+                fits you and what your first class will look like.
+              </p>
+
+              <div class="mt-10 space-y-4">
+                <a href="https://wa.me/919599353649?text=Hi%20Krishna%20Dance%20Factory%2C%20I%27d%20like%20to%20join.%20Please%20share%20the%20current%20batch%20timings%20and%20details." target="_blank" rel="noopener"
+                   class="flex w-full items-center justify-center bg-[#25d366] px-8 py-5 text-[11px] font-semibold uppercase tracking-[.22em] text-[#06300f] transition hover:bg-[#1eb85a]">
+                  WhatsApp us
+                </a>
+                <a href="tel:+919599353649"
+                   class="btn-red flex w-full items-center justify-center px-8 py-5 text-[11px] font-semibold uppercase tracking-[.22em] text-white">
+                  Call +91 95993 53649
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="border-t border-white/10 py-14">
+      <div class="mx-auto max-w-[1400px] px-5 sm:px-8">
+        <div class="flex flex-col items-center gap-8 md:flex-row md:justify-between">
+          <div class="flex items-center gap-4">
+            <a href="#home" class="tracking-[.12em] leading-none">
+              <img src="./logo.jpg" alt="Krishna Dance Factory logo" class="logo">
+            </a>
+            <p class="font-display text-sm text-bone">Krishna Dance Factory</p>
+          </div>
+
+          <ul class="flex flex-wrap justify-center gap-7 text-[11px] uppercase tracking-[.18em] text-ash">
+            <li><a href="#about" class="hover:text-blood transition">About</a></li>
+            <li><a href="#classes" class="hover:text-blood transition">Classes</a></li>
+            <li><a href="#schedule" class="hover:text-blood transition">Schedule</a></li>
+            <li><a href="#contact" class="hover:text-blood transition">Contact</a></li>
+          </ul>
+
+          <p class="text-[11px] text-ash">© <span id="yr"></span> Krishna Dance Factory</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919599353649" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+     class="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] shadow-[0_10px_30px_-8px_rgba(37,211,102,.8)] transition hover:scale-110">
+    <svg viewBox="0 0 24 24" class="h-7 w-7 fill-white"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.470 0 1.45 1.06 2.86 1.21 3.06.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 18.02h-.01a8.2 8.2 0 01-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 01-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 012.41 5.83c0 4.54-3.7 8.23-8.24 8.23z"/></svg>
+  </a>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ---------- Year ---------- */
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* ---------- Sticky nav styling on scroll ---------- */
+    var nav = document.getElementById('nav');
+    function onScroll() {
+      if (window.scrollY > 40) {
+        nav.classList.add('bg-ink/85', 'backdrop-blur-xl', 'border-b', 'border-white/10');
+      } else {
+        nav.classList.remove('bg-ink/85', 'backdrop-blur-xl', 'border-b', 'border-white/10');
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------- Mobile menu ---------- */
+    var burger = document.getElementById('burger');
+    var menu = document.getElementById('mobileMenu');
+    var l1 = burger.querySelector('[data-l1]');
+    var l2 = burger.querySelector('[data-l2]');
+
+    burger.addEventListener('click', function () {
+      var open = menu.classList.toggle('hidden') === false;
+      burger.setAttribute('aria-expanded', String(open));
+      l1.style.transform = open ? 'translateY(3px) rotate(45deg)' : '';
+      l2.style.transform = open ? 'translateY(-3px) rotate(-45deg)' : '';
+    });
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        menu.classList.add('hidden');
+        burger.setAttribute('aria-expanded', 'false');
+        l1.style.transform = ''; l2.style.transform = '';
       });
-    </script>
-  </body>
+    });
+
+    /* ---------- Reveal on scroll ---------- */
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+    /* ---------- Counters ---------- */
+    var counters = document.querySelectorAll('[data-count]');
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        var target = parseInt(el.dataset.count, 10);
+        var start = performance.now(), dur = 1600;
+        (function tick(now) {
+          var p = Math.min((now - start) / dur, 1);
+          el.textContent = Math.floor((1 - Math.pow(1 - p, 3)) * target).toLocaleString('en-IN');
+          if (p < 1) requestAnimationFrame(tick);
+        })(start);
+        cio.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (c) { cio.observe(c); });
+
+    /* ---------- Accordion ---------- */
+    document.querySelectorAll('.acc-head').forEach(function (head) {
+      head.addEventListener('click', function () {
+        var body = head.nextElementSibling;
+        var icon = head.querySelector('.acc-icon');
+        var isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
+
+        document.querySelectorAll('.acc-body').forEach(function (b) { b.style.maxHeight = '0px'; });
+        document.querySelectorAll('.acc-icon').forEach(function (i) { i.style.transform = ''; i.textContent = '+'; });
+        document.querySelectorAll('.acc-head').forEach(function (h) { h.setAttribute('aria-expanded', 'false'); });
+
+        if (!isOpen) {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+          head.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+    // open the first one by default
+    var firstHead = document.querySelector('.acc-head');
+    if (firstHead) firstHead.click();
+
+    /* ---------- Testimonials ---------- */
+    var quotes = [
+      { t: 'I had two left feet and zero rhythm. Six weeks later I danced at a social without counting out loud. That still surprises me.', n: 'Meghna S.', r: 'Salsa · Beginner batch' },
+      { t: 'We booked them three weeks before our sangeet. They built a set around what our families could actually do. It worked.', n: 'Arjun & Riya', r: 'Wedding choreography' },
+      { t: 'Small batches mean you actually get corrected. I have been to bigger studios where nobody knew my name.', n: 'Kabir M.', r: 'Bachata · Level 2' },
+      { t: 'My daughter looks forward to Tuesdays more than anything else in her week.', n: 'Priya N.', r: 'Parent · Kids batch' }
+    ];
+
+    var qWrap = document.getElementById('quotes');
+    var dWrap = document.getElementById('dots');
+    var idx = 0, timer;
+
+    quotes.forEach(function (q, i) {
+      var el = document.createElement('div');
+      el.className = 'absolute inset-0 transition-all duration-700';
+      el.style.opacity = i === 0 ? '1' : '0';
+      el.style.transform = i === 0 ? 'none' : 'translateY(16px)';
+      el.style.pointerEvents = i === 0 ? 'auto' : 'none';
+      el.innerHTML =
+        '<p class="font-display text-[clamp(1.25rem,2.6vw,2rem)] italic leading-snug text-bone">&ldquo;' + q.t + '&rdquo;</p>' +
+        '<p class="mt-8 text-sm text-bone">' + q.n + '</p>' +
+        '<p class="mt-1 text-[10px] uppercase tracking-widest2 text-blood">' + q.r + '</p>';
+      qWrap.appendChild(el);
+
+      var dot = document.createElement('button');
+      dot.setAttribute('aria-label', 'Testimonial ' + (i + 1));
+      dot.className = 'h-1.5 w-8 transition-colors';
+      dot.style.background = i === 0 ? 'var(--blood)' : 'rgba(255,255,255,.18)';
+      dot.addEventListener('click', function () { show(i); reset(); });
+      dWrap.appendChild(dot);
+    });
+
+    function show(n) {
+      idx = n;
+      Array.prototype.forEach.call(qWrap.children, function (el, i) {
+        var on = i === n;
+        el.style.opacity = on ? '1' : '0';
+        el.style.transform = on ? 'none' : 'translateY(16px)';
+        el.style.pointerEvents = on ? 'auto' : 'none';
+      });
+      Array.prototype.forEach.call(dWrap.children, function (d, i) {
+        d.style.background = i === n ? 'var(--blood)' : 'rgba(255,255,255,.18)';
+      });
+    }
+    function reset() { clearInterval(timer); timer = setInterval(next, 6000); }
+    function next() { show((idx + 1) % quotes.length); }
+    reset();
+
+
+  })();
+  </script>
+
+  <!-- Call / WhatsApp click tracking (carried over from the previous site).
+       These fire the click_call and click_whatsapp GA4 events that the
+       existing Google Ads conversions rely on. -->
+  <script>
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href^="tel:"], a[href*="wa.me"]');
+      if (!a || typeof gtag !== 'function') return;
+      var isCall = a.getAttribute('href').indexOf('tel:') === 0;
+      gtag('event', isCall ? 'click_call' : 'click_whatsapp', {
+        event_category: 'engagement',
+        event_label: window.location.pathname
+      });
+    });
+  </script>
+</body>
 </html>
