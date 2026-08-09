@@ -10,6 +10,7 @@ module.exports = {
     './index.html',
     './private-classes/index.html',
     './salsa-bachata/index.html',
+    './kids-dance-classes/index.html',
   ],
   theme: {
     extend: {
