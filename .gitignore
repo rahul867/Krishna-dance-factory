@@ -1,0 +1,4 @@
+_link_backup/
+*.tmp
+.DS_Store
+Thumbs.db
