@@ -12,20 +12,17 @@
     /* custom code End*/
 
 
-    /* --- Ambient red bokeh background (matches the mockup's droplet backdrop) --- */
+    /* --- Clean, warm studio backdrop (grounded, warm ambient light, zero artificial orbs) --- */
     .bokeh {
       position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
       background:
-        radial-gradient(900px 700px at 12% 18%, rgba(224,26,43,.20), transparent 60%),
-        radial-gradient(800px 600px at 88% 12%, rgba(224,26,43,.14), transparent 62%),
-        radial-gradient(1000px 800px at 50% 108%, rgba(224,26,43,.16), transparent 60%),
-        #0b0708;
+        radial-gradient(1000px 800px at 15% 15%, rgba(224,26,43,.10), transparent 65%),
+        radial-gradient(900px 700px at 85% 20%, rgba(180,20,35,.08), transparent 60%),
+        radial-gradient(1200px 900px at 50% 90%, rgba(224,26,43,.09), transparent 65%),
+        #0c0809;
     }
     .bokeh span {
-      position: absolute; border-radius: 9999px;
-      background: radial-gradient(circle at 32% 28%, rgba(255,90,105,.55), rgba(150,10,22,.28) 45%, rgba(0,0,0,0) 70%);
-      filter: blur(.5px);
-      animation: floaty 9s ease-in-out infinite;
+      display: none;
     }
 
     /* --- Reveal on scroll --- */
