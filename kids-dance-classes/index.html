@@ -31,23 +31,91 @@
   <link rel="stylesheet" href="../style.css?v=5">
   <link rel="stylesheet" href="../tailwind.css">
 
+    <!-- Schema.org DanceSchool, Service & FAQPage Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "DanceSchool",
-    "name": "Krishna Dance Factory",
-    "image": "https://krishnadancefactory.in/images/landing/hero.jpg",
-    "url": "https://krishnadancefactory.in/kids-dance-classes/",
-    "telephone": "+919599353649",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "D4/4, Club Drive, DLF Exclusive Floors, Sector 53, DLF Phase 5",
-      "addressLocality": "Gurugram",
-      "addressRegion": "Haryana",
-      "postalCode": "122009",
-      "addressCountry": "IN"
-    },
-    "priceRange": "₹₹"
+    "@graph": [
+      {
+        "@type": "DanceSchool",
+        "name": "Krishna Dance Factory",
+        "image": "https://krishnadancefactory.in/images/landing/hero.jpg",
+        "url": "https://krishnadancefactory.in/kids-dance-classes/",
+        "telephone": "+919599353649",
+        "email": "krishnachoreographer@gmail.com",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "D4/4, Club Drive, DLF Exclusive Floors, Sector 53, DLF Phase 5",
+          "addressLocality": "Gurugram",
+          "addressRegion": "Haryana",
+          "postalCode": "122009",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "28.4357",
+          "longitude": "77.1006"
+        },
+        "hasMap": "https://share.google/UefStw4itrTwEu1Ay"
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Kids Dance Classes",
+        "name": "Kids Dance Classes in Gurgaon Sector 53 DLF Phase 5",
+        "url": "https://krishnadancefactory.in/kids-dance-classes/",
+        "description": "Fun, safe, and structured dance training for children aged 4 to 14 in Bollywood, Hip Hop, and freestyle rhythm at Krishna Dance Factory Gurgaon.",
+        "provider": {
+          "@type": "DanceSchool",
+          "name": "Krishna Dance Factory"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What age groups are accepted in kids dance classes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We teach children aged 4 to 14 years old, divided into age-appropriate batches so young dancers learn comfortably with their peers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What dance styles are taught in the kids batches?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We focus on energetic Bollywood choreography, Hip Hop grooves, isolations, and freestyle rhythm building."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the FREE trial class work for kids?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer a free trial class every Saturday so your child can experience the studio, meet founder Krishna, and try the steps before you enroll."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the studio environment safe and parent-friendly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our DLF Phase 5 studio is a clean, fully air-conditioned, secure environment with comfortable seating for parents."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is the kids dance studio located in Gurgaon?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At D4/4, Club Drive, DLF Exclusive Floors, Sector 53, DLF Phase 5, Gurugram (near DLF Club5 and Golf Course Road)."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -334,6 +402,60 @@
             <span class="acc-icon font-cond text-2xl text-blood transition-transform">+</span>
           </button>
           <div class="acc-body"><p class="pb-5 text-sm leading-relaxed text-ash">Comfortable clothes they can move in — a t-shirt, track pants or shorts, and sports shoes. Bring a water bottle too.</p></div>
+        </div>
+      </div>
+    </section>
+
+        <!-- ============ FAQ ACCORDION ============ -->
+    <section class="border-t border-white/10 bg-panel/40 py-14 sm:py-18">
+      <div class="mx-auto max-w-[1100px] px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <p class="text-[11px] uppercase tracking-widest2 text-blood">Kids FAQs</p>
+          <h2 class="mt-2 font-display text-[clamp(1.5rem,3.5vw,2.2rem)] font-black uppercase leading-tight">
+            Questions From <span class="text-blood italic">Parents</span>
+          </h2>
+        </div>
+
+        <div class="mt-10 divide-y divide-white/10 border-y border-white/10">
+          <div>
+            <button class="acc-head flex w-full items-center justify-between gap-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-lg">What age groups are accepted in kids dance classes?</span>
+              <span class="acc-icon font-cond text-2xl text-blood transition-transform">+</span>
+            </button>
+            <div class="acc-body"><p class="pb-5 text-sm leading-relaxed text-ash">We teach children aged 4 to 14 years old, divided into age-appropriate batches so young dancers learn comfortably with their peers.</p></div>
+          </div>
+
+          <div>
+            <button class="acc-head flex w-full items-center justify-between gap-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-lg">What dance styles are taught in the kids batches?</span>
+              <span class="acc-icon font-cond text-2xl text-blood transition-transform">+</span>
+            </button>
+            <div class="acc-body"><p class="pb-5 text-sm leading-relaxed text-ash">We focus on energetic Bollywood choreography, Hip Hop grooves, isolations, and freestyle rhythm building designed to build confidence.</p></div>
+          </div>
+
+          <div>
+            <button class="acc-head flex w-full items-center justify-between gap-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-lg">How does the FREE trial class work for kids?</span>
+              <span class="acc-icon font-cond text-2xl text-blood transition-transform">+</span>
+            </button>
+            <div class="acc-body"><p class="pb-5 text-sm leading-relaxed text-ash">We offer a free trial class every Saturday so your child can experience the studio, meet founder Krishna, and try the steps before you enroll.</p></div>
+          </div>
+
+          <div>
+            <button class="acc-head flex w-full items-center justify-between gap-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-lg">Is the studio environment safe and parent-friendly?</span>
+              <span class="acc-icon font-cond text-2xl text-blood transition-transform">+</span>
+            </button>
+            <div class="acc-body"><p class="pb-5 text-sm leading-relaxed text-ash">Yes, our DLF Phase 5 studio is a clean, fully air-conditioned, secure environment with comfortable seating for waiting parents.</p></div>
+          </div>
+
+          <div>
+            <button class="acc-head flex w-full items-center justify-between gap-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-lg">Where is the kids dance studio located in Gurgaon?</span>
+              <span class="acc-icon font-cond text-2xl text-blood transition-transform">+</span>
+            </button>
+            <div class="acc-body"><p class="pb-5 text-sm leading-relaxed text-ash">At D4/4, Club Drive, DLF Exclusive Floors, Sector 53, DLF Phase 5, Gurugram (near DLF Club5 and Golf Course Road).</p></div>
+          </div>
         </div>
       </div>
     </section>

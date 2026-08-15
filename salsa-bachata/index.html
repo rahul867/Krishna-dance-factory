@@ -31,34 +31,97 @@
   <link rel="stylesheet" href="../style.css?v=5">
   <link rel="stylesheet" href="../tailwind.css">
 
+    <!-- Schema.org DanceSchool, Service & FAQPage Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "DanceSchool",
-    "name": "Krishna Dance Factory",
-    "image": "https://krishnadancefactory.in/images/landing/hero.jpg",
-    "url": "https://krishnadancefactory.in/salsa-bachata/",
-    "telephone": "+919599353649",
-    "email": "krishnachoreographer@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "D4/4, Club Drive, DLF Exclusive Floors, Sector 53, DLF Phase 5",
-      "addressLocality": "Gurugram",
-      "addressRegion": "Haryana",
-      "postalCode": "122009",
-      "addressCountry": "IN"
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Gurgaon" },
-      { "@type": "Place", "name": "Sector 53" },
-      { "@type": "Place", "name": "DLF Phase 5" },
-      { "@type": "Place", "name": "Golf Course Road" }
-    ],
-    "hasMap": "https://share.google/UefStw4itrTwEu1Ay",
-    "sameAs": [
-      "https://www.instagram.com/krishnachoreographer"
-    ],
-    "priceRange": "₹₹"
+    "@graph": [
+      {
+        "@type": "DanceSchool",
+        "name": "Krishna Dance Factory",
+        "image": "https://krishnadancefactory.in/images/landing/hero.jpg",
+        "url": "https://krishnadancefactory.in/salsa-bachata/",
+        "telephone": "+919599353649",
+        "email": "krishnachoreographer@gmail.com",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "D4/4, Club Drive, DLF Exclusive Floors, Sector 53, DLF Phase 5",
+          "addressLocality": "Gurugram",
+          "addressRegion": "Haryana",
+          "postalCode": "122009",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "28.4357",
+          "longitude": "77.1006"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Gurgaon" },
+          { "@type": "Place", "name": "Sector 53" },
+          { "@type": "Place", "name": "DLF Phase 5" },
+          { "@type": "Place", "name": "Golf Course Road" }
+        ],
+        "hasMap": "https://share.google/UefStw4itrTwEu1Ay"
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Salsa & Bachata Dance Classes",
+        "name": "Salsa & Bachata Dance Classes in Gurgaon DLF Phase 5",
+        "url": "https://krishnadancefactory.in/salsa-bachata/",
+        "description": "Weekend partner dance training in Salsa On1/On2 and Sensual Bachata for beginner to intermediate dancers in DLF Phase 5 Sector 53 Gurgaon.",
+        "provider": {
+          "@type": "DanceSchool",
+          "name": "Krishna Dance Factory"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I need to bring a partner to join Salsa or Bachata classes in Gurgaon?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, you do not need a partner. In every class, students rotate regularly so you learn to lead or follow with different dancers, helping you build social confidence."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I have never danced before and feel I have two left feet — can I join?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Over 90% of our new joiners have zero dance background. Founder Krishna breaks down timing, basic steps, and turns slowly with personalized attention in small batches of maximum 12."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should I wear to Salsa and Bachata class?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Wear comfortable casual or workout clothes that allow free movement. For footwear, smooth-soled shoes, sneakers, or dance heels (with suede soles) work best."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is the studio located in DLF Phase 5, Gurgaon?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our studio is located at D4/4, Club Drive, DLF Exclusive Floors, Sector 53, DLF Phase 5, Gurugram — walking distance from DLF Club5 and Sector 53-54 Rapid Metro Station."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I check upcoming batch timings and register?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Message Krishna directly on WhatsApp at +91 95993 53649. We will share the latest weekend batch schedules and reserve your spot."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -406,6 +469,60 @@
              class="btn-ghost inline-flex px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[.2em] text-ash">
             Get directions
           </a>
+        </div>
+      </div>
+    </section>
+
+        <!-- ============ FAQ ACCORDION ============ -->
+    <section class="border-t border-white/10 bg-panel/40 py-14 sm:py-18">
+      <div class="mx-auto max-w-[1100px] px-5 sm:px-8">
+        <div class="max-w-2xl reveal">
+          <p class="text-[11px] uppercase tracking-widest2 text-blood">FAQs</p>
+          <h2 class="mt-2 font-display text-[clamp(1.5rem,3.5vw,2.2rem)] font-black uppercase leading-tight">
+            Frequently Asked <span class="text-blood italic">Questions</span>
+          </h2>
+        </div>
+
+        <div class="mt-10 divide-y divide-white/10 border-y border-white/10">
+          <div>
+            <button class="acc-head flex w-full items-center justify-between gap-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-lg">Do I need to bring a partner to join Salsa or Bachata classes?</span>
+              <span class="acc-icon font-cond text-2xl text-blood transition-transform">+</span>
+            </button>
+            <div class="acc-body"><p class="pb-5 text-sm leading-relaxed text-ash">No, you do not need a partner. In every class, students rotate regularly so you learn to lead or follow with different dancers, helping you build real social dancing confidence.</p></div>
+          </div>
+
+          <div>
+            <button class="acc-head flex w-full items-center justify-between gap-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-lg">I have never danced before and feel clumsy — can I join?</span>
+              <span class="acc-icon font-cond text-2xl text-blood transition-transform">+</span>
+            </button>
+            <div class="acc-body"><p class="pb-5 text-sm leading-relaxed text-ash">Yes! Over 90% of our new joiners have zero dance background. Founder Krishna breaks down timing, basic steps, and turns slowly with personalized attention in small batches of maximum 12.</p></div>
+          </div>
+
+          <div>
+            <button class="acc-head flex w-full items-center justify-between gap-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-lg">What should I wear to Salsa and Bachata class?</span>
+              <span class="acc-icon font-cond text-2xl text-blood transition-transform">+</span>
+            </button>
+            <div class="acc-body"><p class="pb-5 text-sm leading-relaxed text-ash">Wear comfortable casual or workout clothes that allow free movement. For footwear, smooth-soled shoes, sneakers, or dance heels with good ankle support work best.</p></div>
+          </div>
+
+          <div>
+            <button class="acc-head flex w-full items-center justify-between gap-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-lg">Where is the studio located in DLF Phase 5, Gurgaon?</span>
+              <span class="acc-icon font-cond text-2xl text-blood transition-transform">+</span>
+            </button>
+            <div class="acc-body"><p class="pb-5 text-sm leading-relaxed text-ash">Our studio is located at D4/4, Club Drive, DLF Exclusive Floors, Sector 53, DLF Phase 5, Gurugram — walking distance from DLF Club5 and Sector 53-54 Rapid Metro Station.</p></div>
+          </div>
+
+          <div>
+            <button class="acc-head flex w-full items-center justify-between gap-6 py-5 text-left" aria-expanded="false">
+              <span class="font-display text-lg">How do I check upcoming batch timings and register?</span>
+              <span class="acc-icon font-cond text-2xl text-blood transition-transform">+</span>
+            </button>
+            <div class="acc-body"><p class="pb-5 text-sm leading-relaxed text-ash">Message Krishna directly on WhatsApp at +91 95993 53649. We will share the latest weekend batch schedules and reserve your spot.</p></div>
+          </div>
         </div>
       </div>
     </section>
