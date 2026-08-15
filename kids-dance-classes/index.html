@@ -611,6 +611,33 @@
         event_category: 'engagement', event_label: 'kids-dance-classes'
       });
     });
+
+    /* 70% Scroll Depth Tracking (fires once per pageview) */
+    var scrolled70 = false;
+    function checkScroll70() {
+      if (scrolled70) return;
+      var doc = document.documentElement;
+      var body = document.body;
+      var scrollTop = window.pageYOffset || doc.scrollTop || body.scrollTop || 0;
+      var scrollHeight = Math.max(body.scrollHeight, doc.scrollHeight, body.offsetHeight, doc.offsetHeight) - window.innerHeight;
+      if (scrollHeight > 0 && (scrollTop / scrollHeight) >= 0.7) {
+        scrolled70 = true;
+        window.removeEventListener('scroll', checkScroll70);
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'scroll', {
+            percent_scrolled: 70,
+            event_category: 'engagement',
+            event_label: 'kids-dance-classes'
+          });
+          window.gtag('event', 'scroll_70', {
+            percent_scrolled: 70,
+            event_category: 'engagement',
+            event_label: 'kids-dance-classes'
+          });
+        }
+      }
+    }
+    window.addEventListener('scroll', checkScroll70, { passive: true });
   })();
   </script>
 </body>

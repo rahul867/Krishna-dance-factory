@@ -735,9 +735,7 @@
   })();
   </script>
 
-  <!-- Call / WhatsApp click tracking (carried over from the previous site).
-       These fire the click_call and click_whatsapp GA4 events that the
-       existing Google Ads conversions rely on. -->
+  <!-- Analytics tracking: Call/WhatsApp clicks & 70% Scroll depth -->
   <script>
     document.addEventListener('click', function (e) {
       var a = e.target.closest('a[href^="tel:"], a[href*="wa.me"]');
@@ -748,6 +746,35 @@
         event_label: window.location.pathname
       });
     });
+
+    /* 70% Scroll Depth Tracking (fires once per pageview) */
+    (function () {
+      var scrolled70 = false;
+      function checkScroll70() {
+        if (scrolled70) return;
+        var doc = document.documentElement;
+        var body = document.body;
+        var scrollTop = window.pageYOffset || doc.scrollTop || body.scrollTop || 0;
+        var scrollHeight = Math.max(body.scrollHeight, doc.scrollHeight, body.offsetHeight, doc.offsetHeight) - window.innerHeight;
+        if (scrollHeight > 0 && (scrollTop / scrollHeight) >= 0.7) {
+          scrolled70 = true;
+          window.removeEventListener('scroll', checkScroll70);
+          if (typeof gtag === 'function') {
+            gtag('event', 'scroll', {
+              percent_scrolled: 70,
+              event_category: 'engagement',
+              event_label: window.location.pathname
+            });
+            gtag('event', 'scroll_70', {
+              percent_scrolled: 70,
+              event_category: 'engagement',
+              event_label: window.location.pathname
+            });
+          }
+        }
+      }
+      window.addEventListener('scroll', checkScroll70, { passive: true });
+    })();
   </script>
 </body>
 </html>
