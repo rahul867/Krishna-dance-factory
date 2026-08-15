@@ -79,8 +79,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3">
 
   <!-- Tailwind, compiled locally. The theme below lives in tailwind.config.js;
        rebuild with:
@@ -97,10 +97,10 @@
   <div class="relative z-10">
 
     <!-- ============ TOP META BAR ============ -->
-    <div class="hidden md:flex items-center justify-between px-8 py-3 text-xs text-ash border-b border-white/10">
-      <span>🎉 Weekend Salsa &amp; Bachata Batches Open</span>
-      <span>📍 DLF Phase 5, Sector 53, Gurugram</span>
-      <span>👋 100% Taught Personally by Krishna</span>
+    <div class="hidden md:flex items-center justify-between px-8 py-3 text-[11px] uppercase tracking-widest2 text-ash">
+      <span>Dance Studio</span>
+      <span>DLF Phase 5 · Gurugram</span>
+      <span>Est. 2016</span>
     </div>
 
     <!-- ============ NAVBAR ============ -->
@@ -178,37 +178,27 @@
         </div>
 
         <!-- Center headline -->
-        <div class="col-span-12 lg:col-span-6 order-first lg:order-none text-center py-6 lg:py-0 reveal">
-          <div class="inline-flex items-center gap-2 rounded-full border border-blood/40 bg-blood/10 px-4 py-1.5 text-xs text-blood font-semibold mb-6">
-            <span>👋 DLF Phase 5, Gurgaon</span>
-          </div>
+        <div class="col-span-12 lg:col-span-6 order-first lg:order-none text-center py-8 lg:py-0 reveal">
+          <p class="mb-6 text-[11px] uppercase tracking-widest2 text-blood">Gurugram · Sector 53</p>
 
-          <h1 class="font-display font-extrabold leading-[1.08] tracking-tight text-white">
-            <span class="block text-[clamp(2.2rem,5.5vw,3.8rem)] font-bold text-white">Learn Salsa, Bachata</span>
-            <span class="block text-[clamp(2.2rem,5.5vw,3.8rem)] font-bold text-white">&amp; Social Dancing</span>
-            <span class="block text-[clamp(1.9rem,4.8vw,3.2rem)] text-blood font-extrabold mt-1">Without Feeling Awkward</span>
+          <h1 class="font-display font-black uppercase leading-[0.92] tracking-tight">
+            <span class="block text-[clamp(2.4rem,7vw,5.2rem)] hero-title">Only <span class="text-blood italic">Dance,</span></span>
+            <span class="block text-[clamp(2.4rem,7vw,5.2rem)] hero-title">Nothing Else</span>
+            <span class="block text-[clamp(2.4rem,7vw,5.2rem)] hero-title">Matters!</span>
           </h1>
 
-          <p class="mx-auto mt-6 max-w-lg text-[15px] sm:text-base leading-relaxed text-ash">
-            Friendly weekend batches taught personally by founder Krishna (14+ years). No partner, no prior experience needed &mdash; just walk in, meet great people, and start moving with confidence.
+          <p class="mx-auto mt-8 max-w-lg text-[15px] leading-relaxed text-ash">
+            Never danced before or feel you have two left feet? You're in good hands.
+            Personalized salsa, bachata, and choreography in DLF Phase 5 &mdash; taught step-by-step with patience, laughter, and zero judgment.
           </p>
 
-          <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="https://wa.me/919599353649?text=Hi%20Krishna%2C%20I%27d%20like%20to%20know%20more%20about%20the%20weekend%20batches%20at%20DLF%20Phase%205."
-               target="_blank" rel="noopener" data-wa
-               class="btn-red w-full sm:w-auto px-8 py-4 text-xs font-bold uppercase tracking-[.18em] text-white text-center">
-              Chat with Krishna on WhatsApp
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#contact" class="btn-red w-full sm:w-auto px-9 py-4 text-[11px] font-semibold uppercase tracking-[.22em] text-white">
+              Start your journey
             </a>
-            <a href="#classes" class="btn-ghost w-full sm:w-auto px-8 py-4 text-xs font-semibold uppercase tracking-[.18em] text-ash text-center">
-              See All Classes ↓
+            <a href="#classes" class="btn-ghost w-full sm:w-auto px-9 py-4 text-[11px] font-semibold uppercase tracking-[.22em] text-ash">
+              See classes
             </a>
-          </div>
-
-          <!-- Trust Badges -->
-          <div class="mt-6 flex flex-wrap items-center justify-center gap-y-2 gap-x-5 text-xs text-ash">
-            <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Max 12 Per Batch</span>
-            <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> 100% Founder Taught</span>
-            <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Solo Dancers Welcome</span>
           </div>
         </div>
 
@@ -220,18 +210,14 @@
           </div>
         </div>
 
-        <!-- Bottom row: small centre image + CTA card -->
+        <!-- Bottom row: small centre image + CTA card (mirrors the mockup) -->
         <div class="col-span-12 lg:col-span-4 mt-6 lg:mt-2 reveal">
-          <div class="rounded-2xl border border-white/10 bg-panel/70 p-7 backdrop-blur-sm">
-            <span class="rounded-full bg-blood/15 text-blood border border-blood/30 px-3 py-0.5 text-[10px] font-bold uppercase tracking-widest">
-              Beginners Welcome
-            </span>
-            <h3 class="font-display text-xl font-bold text-bone mt-3">Start with zero pressure.</h3>
-            <p class="mt-2 text-xs sm:text-sm leading-relaxed text-ash">
-              90% of our students walked in with zero dance background. Krishna teaches every step with patience, laughter, and encouragement.
-            </p>
-            <a href="https://wa.me/919599353649" target="_blank" rel="noopener" class="btn-red mt-5 inline-flex px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[.18em] text-white">
-              Say Hello on WhatsApp
+          <div class="border border-white/10 bg-panel/70 p-8 backdrop-blur-sm">
+            <p class="font-display text-xl text-bone">Dance like a star.</p>
+            <p class="mt-3 text-sm leading-relaxed text-ash">
+              Come see a class, meet the floor, and start when you are ready.</p>
+            <a href="#contact" class="btn-red mt-6 inline-flex px-7 py-3 text-[11px] font-semibold uppercase tracking-[.22em] text-white">
+              Sign up
             </a>
           </div>
         </div>
@@ -334,15 +320,10 @@
     <section id="classes" class="border-y border-white/10 bg-panel/40 py-24 lg:py-32">
       <div class="mx-auto max-w-[1400px] px-5 sm:px-8">
         <div class="max-w-2xl reveal">
-          <span class="rounded-full bg-blood/15 text-blood border border-blood/30 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider">
-            Our Dance Floors
-          </span>
-          <h2 class="mt-4 font-display text-[clamp(1.9rem,4.5vw,3rem)] font-bold text-white leading-tight">
-            Find a style you will <span class="text-blood">love attending</span>
+          <p class="text-[11px] uppercase tracking-widest2 text-blood">What we teach</p>
+          <h2 class="mt-6 font-display text-[clamp(2rem,4.5vw,3.4rem)] font-black uppercase leading-[1.02]">
+            Pick your <span class="text-blood italic">floor</span>
           </h2>
-          <p class="mt-2 text-sm text-ash">
-            Small batches, patient step-by-step guidance, and real social floor confidence from week one.
-          </p>
         </div>
 
         <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -464,15 +445,13 @@
       <div class="mx-auto max-w-[1400px] px-5 sm:px-8">
         <div class="flex flex-wrap items-end justify-between gap-6 reveal">
           <div>
-            <span class="rounded-full bg-blood/15 text-blood border border-blood/30 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider">
-              Your Instructor
-            </span>
-            <h2 class="mt-4 font-display text-[clamp(1.9rem,4.5vw,3rem)] font-bold text-white leading-tight">
-              Meet Krishna &mdash; <span class="text-blood">Founder &amp; Lead</span>
+            <p class="text-[11px] uppercase tracking-widest2 text-blood">The floor</p>
+            <h2 class="mt-6 font-display text-[clamp(2rem,4.5vw,3.4rem)] font-black uppercase leading-[1.02]">
+              Meet your <span class="text-blood italic">instructor</span>
             </h2>
           </div>
-          <p class="max-w-md text-sm leading-relaxed text-ash">
-            With 14+ years of dancing and teaching across Delhi NCR, Krishna makes every beginner feel comfortable, confident, and laughing within the first 10 minutes.
+          <p class="max-w-sm text-sm leading-relaxed text-ash">
+            Every single class is taught personally by Krishna (14+ years mastery). Patient, warm, and 100% zero-judgment.
           </p>
         </div>
 
@@ -513,13 +492,11 @@
         <div class="grid gap-14 lg:grid-cols-2 lg:gap-20">
 
           <div class="reveal">
-            <span class="rounded-full bg-blood/15 text-blood border border-blood/30 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider">
-              Get in Touch
-            </span>
-            <h2 class="mt-4 font-display text-[clamp(1.9rem,4.5vw,3rem)] font-bold text-white leading-tight">
-              Start with a warm, <span class="text-blood">friendly chat</span>
+            <p class="text-[11px] uppercase tracking-widest2 text-blood">Get started</p>
+            <h2 class="mt-6 font-display text-[clamp(2rem,4.5vw,3.4rem)] font-black uppercase leading-[1.02]">
+              Start with a warm<br><span class="text-blood italic">conversation</span>
             </h2>
-            <p class="mt-4 text-sm leading-relaxed text-ash max-w-md">
+            <p class="mt-8 text-sm leading-relaxed text-ash max-w-md">
               Have questions, feeling hesitant, or want to check upcoming weekend batch timings? Message Krishna directly on WhatsApp &mdash; we will answer everything with zero pressure before you visit.
             </p>
 
