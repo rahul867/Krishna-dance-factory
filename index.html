@@ -80,7 +80,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=5">
 
   <!-- Tailwind, compiled locally. The theme below lives in tailwind.config.js;
        rebuild with:
@@ -584,6 +584,23 @@
 
     /* ---------- Year ---------- */
     document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* Reveal on scroll */
+    document.body.classList.add('has-reveal');
+    var reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            en.target.classList.add('in');
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      reveals.forEach(function (r) { io.observe(r); });
+    } else {
+      reveals.forEach(function (r) { r.classList.add('in'); });
+    }
 
     /* ---------- Sticky nav styling on scroll ---------- */
     var nav = document.getElementById('nav');
