@@ -722,7 +722,7 @@
   <!-- GA4 Conversion Event Tracking: Phone Calls & WhatsApp Clicks -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // 1. Track Click-to-Call Clicks
+      // 1. Track Phone Calls (Clean Single Event)
       document.querySelectorAll('a[href^="tel:"]').forEach(function(callLink) {
         callLink.addEventListener('click', function() {
           if (typeof gtag === 'function') {
@@ -731,25 +731,15 @@
               'event_label': this.getAttribute('href'),
               'page_location': window.location.pathname
             });
-            gtag('event', 'phone_call_click', {
-              'event_category': 'Leads',
-              'event_label': this.getAttribute('href'),
-              'page_location': window.location.pathname
-            });
           }
         });
       });
 
-      // 2. Track WhatsApp Inquiries
+      // 2. Track WhatsApp Inquiries (Clean Single Event)
       document.querySelectorAll('a[href*="wa.me"]').forEach(function(waLink) {
         waLink.addEventListener('click', function() {
           if (typeof gtag === 'function') {
             gtag('event', 'click_whatsapp', {
-              'event_category': 'Leads',
-              'event_label': this.getAttribute('href'),
-              'page_location': window.location.pathname
-            });
-            gtag('event', 'whatsapp_chat_click', {
               'event_category': 'Leads',
               'event_label': this.getAttribute('href'),
               'page_location': window.location.pathname

@@ -6,6 +6,7 @@
 - `kids-dance-classes/index.html`
 - `private-classes/index.html`
 - `wedding-choreography/index.html`
+- `guides/best-salsa-bachata-classes-in-gurgaon/index.html`
 
 **Location:** Right before the closing `</body>` tag on each page.
 
@@ -17,11 +18,11 @@
 <!-- GA4 Conversion Event Tracking: Phone Calls & WhatsApp Clicks -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // 1. Track Click-to-Call Clicks
+    // 1. Track Phone Calls (Clean Single Event)
     document.querySelectorAll('a[href^="tel:"]').forEach(function(callLink) {
       callLink.addEventListener('click', function() {
         if (typeof gtag === 'function') {
-          gtag('event', 'phone_call_click', {
+          gtag('event', 'click_call', {
             'event_category': 'Leads',
             'event_label': this.getAttribute('href'),
             'page_location': window.location.pathname
@@ -30,11 +31,11 @@
       });
     });
 
-    // 2. Track WhatsApp Inquiries
+    // 2. Track WhatsApp Inquiries (Clean Single Event)
     document.querySelectorAll('a[href*="wa.me"]').forEach(function(waLink) {
       waLink.addEventListener('click', function() {
         if (typeof gtag === 'function') {
-          gtag('event', 'whatsapp_chat_click', {
+          gtag('event', 'click_whatsapp', {
             'event_category': 'Leads',
             'event_label': this.getAttribute('href'),
             'page_location': window.location.pathname
@@ -50,7 +51,7 @@
 
 ## Dashboard Steps in GA4 (Property ID: 546125240):
 1. Open [analytics.google.com](https://analytics.google.com/).
-2. Go to **Admin** → **Data display** → **Events**.
-3. Toggle the **Mark as conversion** switch to ON for:
-   * `phone_call_click`
-   * `whatsapp_chat_click`
+2. Go to **Admin** → **Data display** → **Events** (or **Key Events**).
+3. Toggle the **Mark as key event** switch to ON for:
+   * `click_call`
+   * `click_whatsapp`
