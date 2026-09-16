@@ -47,6 +47,7 @@
     "description": "Personalized 1-on-1 and couple private salsa and bachata lessons at our Sector 53 DLF Phase 5 studio or at your doorstep across Gurugram.",
     "provider": {
       "@type": "DanceSchool",
+      "@id": "https://krishnadancefactory.in/#danceschool",
       "name": "Krishna Dance Factory",
       "legalName": "Krishna Dance Factory",
       "url": "https://krishnadancefactory.in/",
@@ -60,7 +61,7 @@
       },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "D4/4, Club Drive, DLF Exclusive Floors, Sector 53, DLF Phase 5",
+        "streetAddress": "DLF Exclusive Floors, D4/4, Club Dr, Phase 5, Sector 53",
         "addressLocality": "Gurugram",
         "addressRegion": "Haryana",
         "postalCode": "122009",
@@ -68,10 +69,10 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "28.4357",
-        "longitude": "77.1006"
+        "latitude": 28.4357,
+        "longitude": 77.0982
       },
-      "hasMap": "https://share.google/UefStw4itrTwEu1Ay"
+      "hasMap": "https://maps.google.com/maps?cid=18175839460244014133"
     },
     "areaServed": [
       { "@type": "City", "name": "Gurgaon" },
@@ -160,7 +161,7 @@
       <div class="mx-auto max-w-[1100px] px-5 sm:px-8">
         <nav class="flex items-center justify-between gap-6 py-5">
           <a href="../" class="flex items-center gap-4 shrink-0">
-            <img src="../logo.jpg" alt="Krishna Dance Factory logo" class="logo">
+            <img src="../logo.jpg" alt="Krishna Dance Factory logo" class="logo" width="65" height="65">
             <div class="hidden sm:block leading-tight">
               <p class="font-display text-[15px] tracking-wide text-bone">Krishna Dance Factory</p>
               <p class="text-[10px] uppercase tracking-widest2 text-ash mt-1">Salsa · Bachata · Choreography</p>
@@ -453,7 +454,7 @@
       <div class="mx-auto max-w-[1100px] px-5 sm:px-8">
         <div class="flex flex-col items-center gap-6 md:flex-row md:justify-between">
           <div class="flex items-center gap-4">
-            <a href="../"><img src="../logo.jpg" alt="Krishna Dance Factory logo" class="logo"></a>
+            <a href="../"><img src="../logo.jpg" alt="Krishna Dance Factory logo" class="logo" width="65" height="65"></a>
             <p class="font-display text-sm text-bone">Krishna Dance Factory</p>
           </div>
           <ul class="flex flex-wrap justify-center gap-7 text-[11px] uppercase tracking-[.18em] text-ash">
@@ -542,16 +543,6 @@
       });
     });
 
-    /* Analytics hooks (fire only if gtag exists) */
-    document.addEventListener('click', function (e) {
-      var a = e.target.closest('a[data-wa], a[data-call]');
-      if (!a || typeof window.gtag !== 'function') return;
-      var isCall = (a.getAttribute('href') || '').indexOf('tel:') === 0;
-      window.gtag('event', isCall ? 'click_call' : 'click_whatsapp', {
-        event_category: 'engagement', event_label: 'private-classes'
-      });
-    });
-
     /* 70% Scroll Depth Tracking (fires once per pageview) */
     var scrolled70 = false;
     function checkScroll70() {
@@ -579,6 +570,47 @@
     }
     window.addEventListener('scroll', checkScroll70, { passive: true });
   })();
+  </script>
+
+  <!-- GA4 Conversion Event Tracking: Phone Calls & WhatsApp Clicks -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Track Click-to-Call Clicks
+      document.querySelectorAll('a[href^="tel:"]').forEach(function(callLink) {
+        callLink.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'click_call', {
+              'event_category': 'Leads',
+              'event_label': this.getAttribute('href'),
+              'page_location': window.location.pathname
+            });
+            gtag('event', 'phone_call_click', {
+              'event_category': 'Leads',
+              'event_label': this.getAttribute('href'),
+              'page_location': window.location.pathname
+            });
+          }
+        });
+      });
+
+      // 2. Track WhatsApp Inquiries
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(waLink) {
+        waLink.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'click_whatsapp', {
+              'event_category': 'Leads',
+              'event_label': this.getAttribute('href'),
+              'page_location': window.location.pathname
+            });
+            gtag('event', 'whatsapp_chat_click', {
+              'event_category': 'Leads',
+              'event_label': this.getAttribute('href'),
+              'page_location': window.location.pathname
+            });
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
