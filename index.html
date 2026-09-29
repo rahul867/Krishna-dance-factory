@@ -37,11 +37,11 @@
     gtag('config', 'G-9EC735TX9M');
   </script>
 
-  <!-- Local SEO Schema for Google Knowledge Graph & 3-Pack Sync -->
+  <!-- Local business structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "DanceSchool",
+    "@type": "LocalBusiness",
     "@id": "https://krishnadancefactory.in/#danceschool",
     "name": "Krishna Dance Factory",
     "alternateName": ["KDF Dance Studio Gurgaon", "Krishna Dance Academy"],
@@ -70,12 +70,6 @@
       { "@type": "Place", "name": "Golf Course Road" },
       { "@type": "City", "name": "Gurgaon" }
     ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "15",
-      "bestRating": "5"
-    },
     "sameAs": [
       "https://www.instagram.com/krishnachoreographer",
       "https://maps.google.com/maps?cid=18175839460244014133"
@@ -751,8 +745,7 @@
           if (typeof gtag === 'function') {
             gtag('event', 'click_call', {
               'event_category': 'Leads',
-              'event_label': this.getAttribute('href'),
-              'page_location': window.location.pathname
+              'event_label': this.getAttribute('href')
             });
           }
         });
@@ -764,8 +757,7 @@
           if (typeof gtag === 'function') {
             gtag('event', 'click_whatsapp', {
               'event_category': 'Leads',
-              'event_label': this.getAttribute('href'),
-              'page_location': window.location.pathname
+              'event_label': this.getAttribute('href')
             });
           }
         });

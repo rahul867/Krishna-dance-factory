@@ -4,19 +4,23 @@
 - `index.html`
 - `salsa-bachata/index.html`
 - `kids-dance-classes/index.html`
+- `private-classes/index.html`
+- `wedding-choreography/index.html`
 
 **Location:** Inside the `<head> ... </head>` tag of each file.
 
 ---
 
-## Code to Insert:
+## Existing schema to update:
+
+Update the JSON-LD already present on all five pages, including nested `Service.provider` objects. Do not add a second copy. Preserve the existing `#danceschool` entity ID.
 
 ```html
-<!-- Local SEO Schema for Google Knowledge Graph & 3-Pack Sync -->
+<!-- Local business structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "DanceSchool",
+  "@type": "LocalBusiness",
   "@id": "https://krishnadancefactory.in/#danceschool",
   "name": "Krishna Dance Factory",
   "alternateName": ["KDF Dance Studio Gurgaon", "Krishna Dance Academy"],
@@ -45,12 +49,6 @@
     { "@type": "Place", "name": "Golf Course Road" },
     { "@type": "City", "name": "Gurgaon" }
   ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "15",
-    "bestRating": "5"
-  },
   "sameAs": [
     "https://www.instagram.com/krishnachoreographer",
     "https://maps.google.com/maps?cid=18175839460244014133"
@@ -62,4 +60,4 @@
 ---
 
 ## Verification:
-After committing and pushing, test URLs with [Google Rich Results Test](https://search.google.com/test/rich-results) to verify `DanceSchool` schema is valid without errors.
+Parse every JSON-LD block after editing. Check that no `DanceSchool` schema type or business `aggregateRating` remains, while the existing `#danceschool` ID and service providers still refer to the same studio. Check the corrected vocabulary with [Schema Markup Validator](https://validator.schema.org/) and use **Code input** in [Google Rich Results Test](https://search.google.com/test/rich-results) before deployment. A valid schema does not promise rankings, Maps synchronization, or review stars.

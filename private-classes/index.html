@@ -36,7 +36,7 @@
   <link rel="icon" href="../favicon.jpg">
   <link rel="stylesheet" href="../tailwind.css">
 
-  <!-- Schema.org Service & DanceSchool Structured Data -->
+  <!-- Schema.org Service & LocalBusiness structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,7 +46,7 @@
     "url": "https://krishnadancefactory.in/private-classes/",
     "description": "Personalized 1-on-1 and couple private salsa and bachata lessons at our Sector 53 DLF Phase 5 studio or at your doorstep across Gurugram.",
     "provider": {
-      "@type": "DanceSchool",
+      "@type": "LocalBusiness",
       "@id": "https://krishnadancefactory.in/#danceschool",
       "name": "Krishna Dance Factory",
       "legalName": "Krishna Dance Factory",
@@ -581,8 +581,7 @@
           if (typeof gtag === 'function') {
             gtag('event', 'click_call', {
               'event_category': 'Leads',
-              'event_label': this.getAttribute('href'),
-              'page_location': window.location.pathname
+              'event_label': this.getAttribute('href')
             });
           }
         });
@@ -594,8 +593,7 @@
           if (typeof gtag === 'function') {
             gtag('event', 'click_whatsapp', {
               'event_category': 'Leads',
-              'event_label': this.getAttribute('href'),
-              'page_location': window.location.pathname
+              'event_label': this.getAttribute('href')
             });
           }
         });

@@ -12,7 +12,9 @@
 
 ---
 
-## Code to Insert:
+## Existing handlers to update:
+
+Update the click handlers already present on each page; do not insert a duplicate script. Leave `page_location` unset in these event payloads so GA4 supplies the full page URL automatically.
 
 ```html
 <!-- GA4 Conversion Event Tracking: Phone Calls & WhatsApp Clicks -->
@@ -24,8 +26,7 @@
         if (typeof gtag === 'function') {
           gtag('event', 'click_call', {
             'event_category': 'Leads',
-            'event_label': this.getAttribute('href'),
-            'page_location': window.location.pathname
+            'event_label': this.getAttribute('href')
           });
         }
       });
@@ -37,8 +38,7 @@
         if (typeof gtag === 'function') {
           gtag('event', 'click_whatsapp', {
             'event_category': 'Leads',
-            'event_label': this.getAttribute('href'),
-            'page_location': window.location.pathname
+            'event_label': this.getAttribute('href')
           });
         }
       });
