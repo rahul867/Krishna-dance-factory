@@ -51,6 +51,35 @@
     .dance-photo::after {
       background: linear-gradient(180deg, transparent 65%, rgba(11,7,8,.65) 100%);
     }
+    .dance-photo--bachata {
+      width: 100%;
+      height: auto;
+      min-height: clamp(300px, 32vw, 360px);
+      aspect-ratio: 1672 / 941;
+    }
+    .dance-photo--bachata img { object-position: center; }
+    .dance-photo--bachata:hover img { transform: none; }
+    .dance-photo--bachata::after {
+      background: linear-gradient(180deg, transparent 80%, rgba(11,7,8,.3) 100%);
+    }
+    .dance-photo--salsa {
+      width: 100%;
+      height: auto;
+      min-height: clamp(300px, 32vw, 360px);
+      aspect-ratio: 1672 / 941;
+    }
+    .dance-photo--salsa img { object-position: center; }
+    .dance-photo--salsa:hover img { transform: none; }
+    .dance-photo--salsa::after {
+      background: linear-gradient(180deg, transparent 80%, rgba(11,7,8,.3) 100%);
+    }
+    .weekend-gallery { align-items: start; }
+    .weekend-gallery .gallery-photo { width: 100%; height: auto; aspect-ratio: 4 / 5; }
+    .weekend-gallery .gallery-photo img { height: 100%; object-fit: cover; object-position: center; }
+    .weekend-gallery .gallery-photo:nth-child(3) img,
+    .weekend-gallery .gallery-photo:nth-child(4) img { object-position: center 33%; }
+    .weekend-gallery .gallery-photo::after { opacity: .2; }
+    .weekend-gallery .gallery-photo:hover img { transform: none; }
   </style>
 
   <!-- Local business structured data -->
@@ -285,7 +314,7 @@
 
       <div class="dance-styles grid gap-6 sm:grid-cols-2">
         <article class="border border-white/10 bg-ink/60 overflow-hidden">
-          <div class="frame dance-photo"><img src="../images/landing/bachata.jpg" alt="Bachata class at Krishna Dance Factory, Sector 53 Gurgaon" loading="lazy"></div>
+          <div class="frame dance-photo dance-photo--bachata"><img src="../images/landing/bachata-landscape.webp" alt="Couple dancing Bachata in a close partner hold, photographed in black and white" width="1672" height="941" loading="lazy" decoding="async"></div>
           <div class="p-7">
             <h3 class="font-display text-2xl">Bachata</h3>
             <p class="mt-3 text-sm leading-relaxed text-ash">
@@ -296,7 +325,7 @@
         </article>
 
         <article class="border border-white/10 bg-ink/60 overflow-hidden">
-          <div class="frame dance-photo"><img src="../images/landing/salsa.jpg" alt="Salsa class at Krishna Dance Factory, Sector 53 Gurgaon" loading="lazy"></div>
+          <div class="frame dance-photo dance-photo--salsa"><img src="../images/landing/salsa-landscape.webp" alt="Couple performing a full-body Salsa pose with the woman's arm raised" width="1672" height="941" loading="lazy" decoding="async"></div>
           <div class="p-7">
             <h3 class="font-display text-2xl">Salsa</h3>
             <p class="mt-3 text-sm leading-relaxed text-ash">
@@ -384,11 +413,11 @@
         Real classes, real socials, real people — straight from our dance floor.
       </p>
 
-      <div class="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
-        <div class="frame h-52 lg:h-64"><img src="../images/landing/social-1.jpg" alt="Social dance night at Krishna Dance Factory" loading="lazy"></div>
-        <div class="frame h-52 lg:h-64"><img src="../images/landing/social-2.jpg" alt="Packed social dance floor in Gurgaon" loading="lazy"></div>
-        <div class="frame h-52 lg:h-64"><img src="../images/landing/social-3.jpg" alt="Salsa performance at Krishna Dance Factory" loading="lazy"></div>
-        <div class="frame h-52 lg:h-64"><img src="../images/landing/social-4.jpg" alt="Bachata social dancing in Gurgaon" loading="lazy"></div>
+      <div class="weekend-gallery mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div class="frame gallery-photo"><img src="../images/landing/social-1-clean.webp" alt="Partners performing a supported dance dip" width="1122" height="1402" loading="lazy" decoding="async"></div>
+        <div class="frame gallery-photo"><img src="../images/landing/social-2.jpg" alt="Packed social dance floor in Gurgaon" width="700" height="1050" loading="lazy" decoding="async"></div>
+        <div class="frame gallery-photo"><img src="../images/landing/social-3-clean.webp" alt="Partners performing a low dance pose with raised joined hands" width="1024" height="1536" loading="lazy" decoding="async"></div>
+        <div class="frame gallery-photo"><img src="../images/landing/social-4-clean.webp" alt="Partners performing a dance dip, with the woman in a grey top and brown boots" width="1024" height="1536" loading="lazy" decoding="async"></div>
       </div>
     </section>
 
