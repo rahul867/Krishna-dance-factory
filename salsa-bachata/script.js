@@ -38,10 +38,181 @@
     });
   }
 
+  /* ==========================================================================
+     Source-based WhatsApp Prefilled Message Attribution
+     ========================================================================== */
+  const SOURCE_LABELS = {
+    GOOGLE_ADS: 'Reference: Google Ads',
+    GBP: 'Reference: Google Business Profile',
+    GOOGLE_ORGANIC: 'Reference: Google Organic',
+    UNKNOWN: 'Reference: Website \u2014 source unknown'
+  };
+
+  const SESSION_STORAGE_KEY = 'kdf_visitor_source';
+
+  function detectVisitorSource() {
+    let searchParams;
+    try {
+      searchParams = new URLSearchParams(window.location.search);
+    } catch {
+      searchParams = new URLSearchParams();
+    }
+
+    const hasParam = key => searchParams.has(key) && (searchParams.get(key) || '').trim() !== '';
+    const getParam = key => (searchParams.get(key) || '').trim().toLowerCase();
+
+    // 1. Google Ads identifiers & explicit paid parameters (Highest Precedence over Organic Referrer)
+    const hasGclid = hasParam('gclid');
+    const hasGbraid = hasParam('gbraid');
+    const hasWbraid = hasParam('wbraid');
+    const hasGadSource = hasParam('gad_source');
+
+    const utmMedium = getParam('utm_medium');
+    const utmSource = getParam('utm_source');
+    const utmCampaign = getParam('utm_campaign');
+
+    // Source Classification Helpers
+    const isExplicitNonGoogle = /^(facebook|fb|instagram|ig|meta|bing|linkedin|twitter|x|tiktok|pinterest|youtube)$/i.test(utmSource) ||
+      utmSource.includes('facebook') || utmSource.includes('instagram') || utmSource.includes('meta');
+
+    const isGoogleSource = !isExplicitNonGoogle && (
+      /^(google|google_ads|googleads|adwords|googlesearch|google-ads)$/i.test(utmSource) ||
+      utmSource.includes('google') ||
+      utmSource.includes('adwords')
+    );
+
+    // 1. Google Ads identifiers & explicit Google paid parameters (Highest Precedence over Organic Referrer)
+    const hasGoogleClickId = hasGclid || hasGbraid || hasWbraid || hasGadSource;
+    const isPaidMedium = /^(cpc|ppc|paid|paidsearch|cpm|cpv|cpa)$/i.test(utmMedium);
+    const isGooglePaidCampaign = /(google_ads|googleads|adwords)/i.test(utmCampaign);
+
+    // To be labeled Google Ads, it must have Google click ID OR (paid medium AND confirmed Google source/campaign).
+    // Non-Google sources (Facebook, Instagram, Meta, Bing, etc.) must NEVER be labeled Google Ads.
+    const isGoogleAdsPaid = !isExplicitNonGoogle && (
+      hasGoogleClickId ||
+      (isPaidMedium && (isGoogleSource || isGooglePaidCampaign))
+    );
+
+    if (isGoogleAdsPaid) {
+      return SOURCE_LABELS.GOOGLE_ADS;
+    }
+
+    // 2. Google Business Profile (GBP) (Precedence 2)
+    // Must NOT be labeled as Google Organic even if utm_source=google & utm_medium=organic
+    const utmContent = getParam('utm_content');
+    const isGbpCampaign = /(gbp|gmb|gbp_listing|google_business_profile|googlebusinessprofile|local)/i.test(utmCampaign);
+    const isGbpContent = /(primary_website_button|gbp|gmb)/i.test(utmContent);
+    const isGbpSource = /^(gbp|gmb|google_business_profile|googlebusinessprofile)$/i.test(utmSource);
+    const isGbpMedium = /^(gbp|gmb|maps|local)$/i.test(utmMedium);
+
+    if (!isExplicitNonGoogle && (isGbpCampaign || isGbpContent || isGbpSource || isGbpMedium)) {
+      return SOURCE_LABELS.GBP;
+    }
+
+    // 3. Google Search referrer / Google Organic (Precedence 3)
+    // Organic UTMs must specifically confirm that source is Google!
+    const isGoogleOrganicUtm = isGoogleSource && utmMedium === 'organic';
+
+    let referrerUrl = null;
+    if (document.referrer) {
+      try {
+        referrerUrl = new URL(document.referrer);
+      } catch {
+        referrerUrl = null;
+      }
+    }
+
+    const isCurrentHost = referrerUrl && referrerUrl.hostname === window.location.hostname;
+    // Referrer from Google search, provided there is no explicit non-Google UTM source
+    const isGoogleSearchReferrer = !isCurrentHost && !isExplicitNonGoogle && !utmSource && (
+      (referrerUrl && /(^|\.)google\.[a-z.]+$/i.test(referrerUrl.hostname)) ||
+      (document.referrer && /^android-app:\/\/com\.google\.android\.googlequicksearchbox(\/|$)/i.test(document.referrer))
+    );
+
+    if (isGoogleOrganicUtm || isGoogleSearchReferrer) {
+      return SOURCE_LABELS.GOOGLE_ORGANIC;
+    }
+
+    return null;
+  }
+
+  function getPreservedSource() {
+    try {
+      return window.sessionStorage.getItem(SESSION_STORAGE_KEY);
+    } catch {
+      return null;
+    }
+  }
+
+  function setPreservedSource(source) {
+    try {
+      window.sessionStorage.setItem(SESSION_STORAGE_KEY, source);
+    } catch {
+      // sessionStorage unavailable in restricted/sandboxed contexts
+    }
+  }
+
+  function resolveVisitorSource() {
+    const detected = detectVisitorSource();
+    if (detected) {
+      // New incoming external attribution found; save to session storage
+      setPreservedSource(detected);
+      return detected;
+    }
+
+    // No new source in URL or referrer. Check session storage for internal navigation / refresh.
+    const preserved = getPreservedSource();
+    if (preserved) {
+      return preserved;
+    }
+
+    // First visit in session with no identifiable source
+    const unknownSource = SOURCE_LABELS.UNKNOWN;
+    setPreservedSource(unknownSource);
+    return unknownSource;
+  }
+
+  function updateWhatsAppLinks() {
+    const sourceLabel = resolveVisitorSource();
+    const waLinks = document.querySelectorAll('a[href*="wa.me"]');
+
+    waLinks.forEach(link => {
+      let destination;
+      try {
+        destination = new URL(link.getAttribute('href'), window.location.href);
+      } catch {
+        return;
+      }
+
+      // Preserve the base prefilled message and original href
+      let baseText = link.getAttribute('data-base-text');
+      if (baseText === null) {
+        baseText = destination.searchParams.get('text') || '';
+        link.setAttribute('data-base-text', baseText);
+        link.setAttribute('data-original-href', link.getAttribute('href'));
+      }
+
+      const updatedText = baseText.trim()
+        ? `${baseText.trim()}\n\n${sourceLabel}`
+        : sourceLabel;
+
+      // Construct clean URL preserving phone number / pathname and encoding text
+      const cleanUrl = `${destination.origin}${destination.pathname}?text=${encodeURIComponent(updatedText)}`;
+      link.setAttribute('href', cleanUrl);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateWhatsAppLinks);
+  } else {
+    updateWhatsAppLinks();
+  }
+
   // Local previews and unrecognized hosts must never pollute the production property.
-  const productionHost = ['krishnadancefactory.in', 'www.krishnadancefactory.in']
-    .includes(window.location.hostname);
-  if (!productionHost || window.location.protocol !== 'https:') return;
+  const isProduction = ['krishnadancefactory.in', 'www.krishnadancefactory.in']
+    .includes(window.location.hostname) && window.location.protocol === 'https:';
+  const enableTracking = isProduction || Boolean(window.__kdfEnableTracking);
+  if (!enableTracking) return;
 
   function track(name, parameters) {
     if (typeof window.gtag === 'function') {
