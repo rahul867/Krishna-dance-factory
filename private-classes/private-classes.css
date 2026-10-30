@@ -1,0 +1,102 @@
+/* Private lessons: existing editorial system with an image-led coaching hero. */
+.private-page p.eyebrow { font-size:10px; line-height:1.6; }
+.editorial-content.private-page > .private-lesson-hero {
+  position:relative; isolation:isolate; overflow:hidden; max-width:none;
+  padding:0; min-height:640px; height:clamp(640px,50vw,780px); background:var(--ivory);
+}
+.private-lesson-hero-image { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:right center; z-index:-3; }
+.private-lesson-hero-blend { position:absolute; inset:0; z-index:-2; background:linear-gradient(90deg,#f4f0e8 0%,#f4f0e8 17%,#f4f0e8ed 30%,#f4f0e800 49%); }
+.private-lesson-hero-inner { height:100%; display:flex; align-items:center; }
+.private-lesson-hero-copy { width:43%; max-width:500px; padding-block:38px; }
+.private-page .private-lesson-hero-copy .breadcrumb-nav { margin-bottom:22px; }
+.private-page .private-lesson-hero-copy > .eyebrow { margin-bottom:22px; font-size:9px; letter-spacing:.16em; }
+.private-page .private-lesson-hero-copy h1 { font-size:clamp(42px,4.1vw,60px); line-height:1.12; margin-bottom:25px; text-wrap:initial; }
+.private-page .private-hero-intro { max-width:375px; font-size:15px; line-height:1.85; color:var(--muted); }
+.private-hero-actions { display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-top:28px; }
+.private-page .private-hero-note { margin-top:14px; color:var(--muted); font-size:11px; }
+.private-split { display:grid; grid-template-columns:1fr 1fr; gap:95px; align-items:start; }
+.private-page .private-intro { border-bottom:1px solid var(--line); }
+.private-page .eyebrow + h2 { margin-top:18px; }
+.private-reading-copy p { color:var(--muted); max-width:460px; }
+.private-reading-copy p + p { margin-top:18px; }
+.private-page .dance-copy h3 { font-size:clamp(35px,3.3vw,48px); }
+.private-page .dance-copy p + p { margin-top:16px; }
+.private-page .dance-copy .text-link { margin-top:27px; }
+.private-page .dance-photo img { height:auto; aspect-ratio:1.25; }
+.private-page .private-coach h2,.private-page .private-coach h3 { color:var(--ivory); }
+.private-page .private-coach .text-link { color:var(--ivory); }
+.private-page .private-coach .teacher-copy > p { color:#bcb7af; }
+.private-page .private-coach .teacher-intro { color:var(--ivory); }
+.private-page .private-coach .teaching-approach h3 { font-size:23px; }
+.private-page .private-coach .teaching-approach p { font-size:13px; }
+.private-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:48px; padding:0; margin:0; list-style:none; }
+.private-steps li { border-top:1px solid var(--line); padding-top:22px; }
+.private-steps h3 { margin-bottom:15px; }
+.private-steps p { color:var(--muted); font-size:14px; }
+.private-page .private-location { background:var(--soft); }
+.private-location-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
+.private-location-grid article + article { border-left:1px solid #c7c0b5; padding-left:60px; }
+.private-location-grid h3 { margin:12px 0 20px; }
+.private-location-grid p:not(.eyebrow),.private-location-grid address { color:var(--muted); font-size:14px; line-height:1.8; }
+.private-location-grid address { font-style:normal; margin:20px 0 26px; color:var(--ink); }
+.private-location-grid p + p { margin-top:16px; }
+.private-location-grid .private-space-note { border-top:1px solid #c7c0b5; padding-top:17px; }
+.private-page .faq-intro > p:not(.eyebrow) { max-width:310px; }
+.private-page .faq-list summary { font-size:15px; }
+.private-page .faq-list details p { font-size:14px; }
+.private-page .private-other-classes { border-top:1px solid var(--line); }
+.private-other-grid { display:grid; grid-template-columns:1fr 1fr; gap:75px; margin-top:40px; }
+.private-other-grid article { border-top:1px solid var(--line); padding-top:25px; }
+.private-other-grid p { color:var(--muted); margin:18px 0 24px; max-width:420px; }
+.private-page .private-final { max-width:none; }
+.private-page .private-final h2 { font-size:clamp(40px,4.3vw,60px); }
+.private-page .private-final .eyebrow { font-size:10px; color:#bcb7af; }
+.private-page .private-final .enquiry-actions > p { font-size:12px; }
+@media (min-width:1800px) {
+  .private-lesson-hero-image { width:1800px; left:auto; right:calc((100vw - 1800px)/2); }
+}
+@media(max-width:1100px) and (min-width:901px) {
+  .private-lesson-hero-copy { width:44%; }
+  .private-page .private-lesson-hero-copy h1 { font-size:43px; }
+  .private-page .private-hero-intro { font-size:14px; }
+  .private-hero-actions { flex-direction:column; align-items:flex-start; gap:16px; }
+}
+@media(max-width:900px) {
+  .editorial-content.private-page > .private-lesson-hero { height:auto; min-height:0; padding-top:370px; }
+  .private-lesson-hero-image { height:370px; object-fit:cover; object-position:78% center; }
+  .private-lesson-hero-blend { inset:325px 0 auto; height:46px; background:linear-gradient(0deg,#f4f0e8,#f4f0e800); }
+  .private-lesson-hero-inner { height:auto; display:block; }
+  .private-lesson-hero-copy { width:100%; max-width:650px; padding-block:30px 48px; }
+  .private-page .private-lesson-hero-copy h1 { font-size:48px; }
+  .private-page .private-hero-intro { max-width:540px; }
+  .private-split { gap:45px; }
+  .private-location-grid { gap:40px; }
+  .private-location-grid article + article { padding-left:35px; }
+  .private-steps { gap:28px; }
+  .private-other-grid { gap:40px; }
+}
+@media(max-width:700px) {
+  .editorial-content.private-page > .private-lesson-hero { padding-top:300px; }
+  .private-lesson-hero-image { height:300px; object-position:80% center; }
+  .private-lesson-hero-blend { inset:255px 0 auto; }
+  .private-page .private-lesson-hero-copy h1 { font-size:40px; }
+  .private-page .private-lesson-hero-copy .breadcrumb-nav { margin-bottom:18px; }
+  .private-page .private-lesson-hero-copy > .eyebrow { margin-bottom:17px; font-size:9px; }
+  .private-page .private-hero-intro { font-size:14px; }
+  .private-hero-actions { gap:18px; margin-top:24px; }
+  .private-hero-actions .quiet-link { font-size:12px; }
+  .private-split,.private-location-grid,.private-other-grid { grid-template-columns:1fr; gap:30px; }
+  .private-page .private-styles .section-heading { margin-bottom:36px; }
+  .private-page .dance-copy h3 { font-size:37px; }
+  .private-reading-copy p,.private-other-grid p { font-size:14px; }
+  .private-page .private-coach .teacher-photo img { aspect-ratio:3/4; }
+  .private-steps { grid-template-columns:1fr; gap:28px; }
+  .private-steps .step-number { margin-bottom:14px; }
+  .private-location-grid article + article { border-left:0; border-top:1px solid #c7c0b5; padding:30px 0 0; }
+  .private-page .private-final h2 { font-size:40px; }
+}
+@media(max-width:370px) {
+  .private-page .private-lesson-hero-copy h1 { font-size:35px; }
+  .private-hero-actions { align-items:flex-start; flex-direction:column; }
+  .private-page .private-final h2 { font-size:35px; }
+}

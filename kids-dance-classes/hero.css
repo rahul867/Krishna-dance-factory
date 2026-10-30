@@ -1,0 +1,41 @@
+/* Full-bleed class scene, with a clear reading surface like the Salsa hero. */
+.hero.kids-class-hero { position:relative; isolation:isolate; overflow:hidden; height:clamp(600px,43vw,740px); min-height:600px; }
+.kids-class-hero .hero-container { display:flex; align-items:center; height:100%; padding-block:36px; }
+.kids-class-hero .hero-copy { width:43%; max-width:430px; padding:0; }
+.kids-class-hero h1 { font-size:clamp(46px,4.5vw,68px); line-height:1.08; }
+.kids-class-hero .hero-intro { max-width:370px; font-size:15px; }
+.kids-class-hero .hero-actions { gap:18px; }
+.kids-class-hero .microcopy { font-size:11px; }
+.kids-class-photo { position:absolute; inset:0 0 0 auto; width:90%; height:100%; margin:0; z-index:-3; }
+.kids-class-photo img { display:block; width:100%; height:100%; max-width:none; object-fit:cover; object-position:right center; }
+.kids-hero-blend { position:absolute; inset:0; z-index:-2; background:linear-gradient(90deg,#f4f0e8 0%,#f4f0e8 15%,#f4f0e8f5 25%,#f4f0e8a8 32%,#f4f0e800 39%); }
+@media(min-width:1800px) {
+ .kids-class-photo { width:1800px; right:calc((100vw - 1800px)/2); }
+}
+@media(max-width:1399px) {
+ .hero.kids-class-hero { display:block; height:auto; min-height:0; padding-top:400px; }
+ .kids-class-photo { inset:0 0 auto; width:100%; height:400px; }
+ .kids-class-photo img { object-position:right center; }
+ .kids-hero-blend { inset:355px 0 auto; height:46px; background:linear-gradient(0deg,#f4f0e8,#f4f0e800); }
+ .kids-class-hero .hero-container { height:auto; display:block; padding-block:28px 48px; }
+ .kids-class-hero .hero-copy { width:100%; max-width:670px; }
+ .kids-class-hero h1 { font-size:48px; }
+ .kids-class-hero .hero-intro { max-width:600px; }
+ .kids-class-hero .hero-actions { flex-direction:row; align-items:center; }
+}
+@media(max-width:700px) {
+ .hero.kids-class-hero { padding-top:300px; }
+ .kids-class-photo { height:300px; }
+ .kids-hero-blend { inset:255px 0 auto; }
+ .kids-class-hero .hero-container { padding-block:25px 40px; }
+ .kids-class-hero h1 { font-size:40px; }
+ .kids-class-hero .hero-intro { font-size:14px; }
+ .kids-class-hero .quiet-link { font-size:11px; }
+}
+@media(max-width:370px) {
+ .hero.kids-class-hero { padding-top:260px; }
+ .kids-class-photo { height:260px; }
+ .kids-hero-blend { inset:215px 0 auto; }
+ .kids-class-hero h1 { font-size:35px; }
+ .kids-class-hero .hero-actions { flex-direction:column; align-items:flex-start; gap:16px; }
+}

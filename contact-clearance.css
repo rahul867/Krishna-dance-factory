@@ -1,0 +1,5 @@
+/* The contact bar is intentionally available on desktop too. Reserve its height
+   at the document end so the final footer links can scroll clear of it. */
+@media (min-width:701px) {
+  body { padding-bottom:calc(52px + env(safe-area-inset-bottom,0px)); }
+}

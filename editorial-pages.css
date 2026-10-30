@@ -1,0 +1,114 @@
+/* Service and guide templates share Home's colours, typography and site shell.
+   Layout utilities remain in tailwind.css; these rules define the visual system. */
+.editorial-page { background:var(--ivory); color:var(--ink); font-family:var(--sans); }
+.editorial-page .site-header { background:rgba(244,240,232,.97); }
+.editorial-page .main-nav [aria-current="page"] { color:#bd1726; text-decoration:underline; text-underline-offset:5px; }
+.editorial-page .menu-toggle { flex-shrink:0; }
+.editorial-content { display:block; }
+.editorial-content > section { padding-block:90px; }
+.editorial-content > section:first-child { padding-top:58px; }
+.editorial-content [class*="max-w-[1100px]"],
+.editorial-content [class*="max-w-[1200px]"] { max-width:1224px; }
+.editorial-content h1,.editorial-content h2,.editorial-content h3 {
+  font-family:var(--serif); font-weight:400; text-transform:none;
+  color:var(--ink); letter-spacing:-.035em; text-wrap:balance;
+}
+.editorial-content h1 { font-size:clamp(38px,4.5vw,64px); line-height:1.1; }
+.editorial-content h2 { font-size:clamp(32px,3.5vw,48px); line-height:1.15; }
+.editorial-content h3 { font-size:27px; line-height:1.2; letter-spacing:-.025em; }
+.editorial-content h1 .editorial-accent,
+.editorial-content h2 .editorial-accent { color:inherit; font-style:italic; }
+.editorial-content p,.editorial-content li { line-height:1.8; }
+.editorial-content p { font-size:15px; }
+.editorial-content .editorial-eyebrow { font-size:10px; line-height:1.6; letter-spacing:.16em; }
+.editorial-content .editorial-muted { color:var(--muted); }
+.editorial-content .editorial-ink { color:var(--ink); }
+.editorial-content .editorial-accent { color:#bd1726; }
+.editorial-content .editorial-success { color:#326044; }
+.editorial-content .editorial-note { color:#78511d; }
+.editorial-content .editorial-line { border-color:var(--line); }
+.editorial-content .editorial-dividers > :not([hidden]) ~ :not([hidden]) { border-color:var(--line); }
+.editorial-content .editorial-surface { background:var(--ivory); }
+.editorial-content .editorial-soft { background:var(--soft); }
+.editorial-content .editorial-tint { background:#e01a2b0a; }
+.editorial-content .editorial-feature { border-color:#bd1726; background:var(--ivory); }
+.editorial-content .editorial-label { border-radius:2px; background:var(--soft); color:var(--ink); font-size:11px; line-height:1.6; }
+.editorial-content article { border-radius:4px; }
+.editorial-content .frame { position:relative; overflow:hidden; background:var(--soft); border-radius:2px; }
+.editorial-content .frame img { width:100%; height:100%; object-fit:cover; }
+.editorial-content .editorial-captioned-photo { height:auto; background:transparent; }
+.editorial-content .editorial-captioned-photo img { height:256px; }
+.editorial-content .photo-caption { position:static; padding:12px 14px; background:var(--ivory); }
+.editorial-content .photo-caption p { color:var(--muted); font-size:12px; }
+.editorial-content .button { font-size:12px; line-height:1.4; height:auto; min-height:48px; letter-spacing:.02em; text-transform:none; }
+.editorial-content .button-outline { color:var(--ink); }
+.editorial-content .button:not(.button-outline) { color:#fff; }
+.editorial-content a:not(.button):hover { color:#bd1726; }
+.editorial-content .acc-head { color:var(--ink); min-height:64px; }
+.editorial-content .acc-head > span:first-child { font-family:var(--sans); font-size:15px; font-weight:400; line-height:1.6; }
+.editorial-content .acc-body { max-height:0; overflow:hidden; transition:max-height .25s ease; }
+.editorial-content .acc-body p { font-size:14px; }
+.editorial-content .acc-icon { color:var(--ink); font:24px/1 var(--sans); }
+.editorial-content .breadcrumb-nav { margin-bottom:24px; }
+.editorial-content .breadcrumb-list { font-size:11px; }
+.editorial-content .guide-header { max-width:900px; margin-inline:auto; padding-top:58px; }
+.editorial-content .guide-header h1 { font-size:clamp(36px,4vw,56px); }
+.editorial-content .guide-body { max-width:900px; margin-inline:auto; }
+.editorial-content .guide-body h2 { font-size:clamp(27px,3vw,36px); }
+.editorial-content .guide-body h3 { font-size:25px; }
+.editorial-content .guide-body table { min-width:620px; }
+.editorial-content .guide-body th { color:#bd1726; font-size:11px; }
+.editorial-content .guide-body td { line-height:1.6; }
+.editorial-content .guide-table { border-radius:4px; }
+.editorial-content .guide-table:focus-visible { outline:3px solid #c53844; outline-offset:4px; }
+.editorial-content .table-hint { display:none; font-size:12px; color:var(--muted); margin-bottom:12px; }
+.editorial-content .wedding-hero-grid { gap:32px; }
+.editorial-content .wedding-hero-copy h1 { font-size:clamp(38px,3.6vw,54px); }
+.editorial-content .wedding-hero-copy .hero-contact-actions { flex-direction:column; align-items:center; }
+.editorial-content .wedding-hero-copy .hero-contact-actions .button { width:min(100%,330px); }
+.editorial-content .wedding-hero-copy .hero-facts { font-size:12px; gap:12px 20px; }
+.editorial-content .private-hero { max-width:1224px; }
+.editorial-content .private-hero h1 { max-width:800px; }
+.editorial-content .service-enquiry { background:var(--ink); color:var(--ivory); }
+.editorial-content .service-enquiry h2 { color:var(--ivory); }
+.editorial-content .service-enquiry .editorial-muted { color:#bcb7af; }
+.editorial-content .service-enquiry .editorial-accent { color:inherit; }
+.editorial-content .service-enquiry .button-outline { color:var(--ivory); border-color:var(--ivory); }
+.editorial-content .service-enquiry .button-outline:hover { background:#ffffff12; }
+.editorial-content .service-enquiry .editorial-ink { color:var(--ivory); }
+/* Keep the existing contact bar on desktop, with enough page clearance. */
+.editorial-page { padding-bottom:calc(52px + env(safe-area-inset-bottom,0px)); }
+.editorial-page .site-footer .footer-bottom { padding-bottom:24px; }
+@media(max-width:1050px) {
+  .editorial-content > section { padding-block:72px; }
+  .editorial-content .wedding-hero-grid { grid-template-columns:1fr 1fr; }
+  .editorial-content .wedding-hero-copy { grid-column:1/-1; grid-row:1; }
+  .editorial-content .wedding-hero-photo { grid-column:auto; grid-row:2; }
+  .editorial-content .wedding-hero-photo .frame { height:340px; }
+  .editorial-content .wedding-hero-copy h1 { max-width:650px; margin-inline:auto; }
+  .editorial-content .wedding-hero-copy .hero-contact-actions { flex-direction:row; justify-content:center; }
+  .editorial-content .wedding-hero-copy .hero-contact-actions .button { width:auto; }
+}
+@media(max-width:700px) {
+  .editorial-content .table-hint { display:block; }
+  .editorial-content > section { padding-block:60px; }
+  .editorial-content > section:first-child { padding-top:32px; }
+  .editorial-content h1 { font-size:40px; }
+  .editorial-content h2 { font-size:35px; }
+  .editorial-content h3 { font-size:26px; }
+  .editorial-content p { font-size:14px; }
+  .editorial-content .guide-header { padding-top:32px; }
+  .editorial-content .guide-body h2 { font-size:29px; }
+  .editorial-content .wedding-hero-grid { gap:24px 16px; }
+  .editorial-content .wedding-hero-photo .frame { height:240px; }
+  .editorial-content .wedding-hero-copy h1 { font-size:40px; }
+  .editorial-content .wedding-hero-copy .hero-contact-actions { flex-direction:column; }
+  .editorial-content .wedding-hero-copy .hero-contact-actions .button { width:100%; }
+}
+@media(max-width:370px) {
+  .editorial-content h1,.editorial-content .wedding-hero-copy h1 { font-size:35px; }
+  .editorial-content .wedding-hero-photo .frame { height:205px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .editorial-content .acc-body { transition:none; }
+}

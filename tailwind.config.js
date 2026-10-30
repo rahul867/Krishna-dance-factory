@@ -1,4 +1,4 @@
-/** Tailwind config for the homepage.
+/** Tailwind config for every published page.
  *
  * Mirrors the inline `tailwind.config` that used to sit next to the CDN
  * script tag in index.html. Rebuild the stylesheet with:
@@ -7,10 +7,12 @@
  */
 module.exports = {
   content: [
-    './index.html',
-    './private-classes/index.html',
-    './salsa-bachata/index.html',
-    './kids-dance-classes/index.html',
+    './*.html',
+    './private-classes/**/*.html',
+    './salsa-bachata/**/*.html',
+    './kids-dance-classes/**/*.html',
+    './wedding-choreography/**/*.html',
+    './guides/**/*.html',
   ],
   theme: {
     extend: {
