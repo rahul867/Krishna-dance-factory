@@ -202,6 +202,14 @@
   border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
 }
 
+/* Breadcrumbs */
+.breadcrumb-nav{margin-bottom:14px}
+.breadcrumb-list{display:flex;align-items:center;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0;font-size:11px;letter-spacing:.04em;color:var(--muted)}
+.breadcrumb-list a{color:var(--muted);text-decoration:none;transition:color .18s ease}
+.breadcrumb-list a:hover{color:var(--red);text-decoration:underline}
+.breadcrumb-list [aria-current="page"]{color:var(--ink);font-weight:600}
+@media(max-width:700px){.breadcrumb-list{font-size:10px;gap:6px}}
+
 @media(max-width: 700px) {
   body {
     padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)) !important;

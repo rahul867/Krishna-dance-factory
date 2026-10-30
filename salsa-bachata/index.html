@@ -92,7 +92,61 @@
         "https://www.instagram.com/krishnachoreographer",
         "https://maps.google.com/maps?cid=18175839460244014133"
       ],
-      "logo": "https://krishnadancefactory.in/kdf_logo_red.webp"
+      "logo": "https://krishnadancefactory.in/kdf_logo_red.webp",
+      "priceRange": "₹₹",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.4456,
+        "longitude": 77.0978
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "48"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Jyoti Rana"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "The vibe is super welcoming."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "tanuja1217 shukla"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Krishna pays a lot of attention to techniques and details."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Neha Kanade"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "the environment is fun and motivating"
+        }
+      ]
     },
     {
       "@type": "WebPage",
@@ -107,8 +161,16 @@
       "about": {
         "@id": "https://krishnadancefactory.in/#danceschool"
       },
-      "hasPart": {
-        "@id": "https://krishnadancefactory.in/salsa-bachata/#questions"
+      "hasPart": [
+        {
+          "@id": "https://krishnadancefactory.in/salsa-bachata/#course"
+        },
+        {
+          "@id": "https://krishnadancefactory.in/salsa-bachata/#questions"
+        }
+      ],
+      "breadcrumb": {
+        "@id": "https://krishnadancefactory.in/salsa-bachata/#breadcrumb"
       }
     },
     {
@@ -213,6 +275,49 @@
           }
         }
       ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://krishnadancefactory.in/salsa-bachata/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://krishnadancefactory.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Salsa & Bachata Classes",
+          "item": "https://krishnadancefactory.in/salsa-bachata/"
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://krishnadancefactory.in/salsa-bachata/#course",
+      "name": "Beginner Salsa & Bachata Weekend Course",
+      "description": "Beginner-friendly weekend Latin dance course in Gurgaon, Sector 53 near Golf Course Road. Learn steps, timing, footwork, turns, body movement and partner work. No partner needed.",
+      "provider": {
+        "@id": "https://krishnadancefactory.in/#danceschool"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "@id": "https://krishnadancefactory.in/salsa-bachata/#course-instance",
+        "courseMode": "OnSite",
+        "courseSchedule": {
+          "@type": "Schedule",
+          "repeatFrequency": "P1W",
+          "byDay": [
+            "https://schema.org/Saturday",
+            "https://schema.org/Sunday"
+          ]
+        },
+        "location": {
+          "@id": "https://krishnadancefactory.in/#danceschool"
+        }
+      }
     }
   ]
 }
@@ -231,7 +336,7 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <img class="hero-image" src="assets/optimized/hero-first-dance-1672.webp" srcset="assets/optimized/hero-first-dance-640.webp 640w, assets/optimized/hero-first-dance-960.webp 960w, assets/optimized/hero-first-dance-1440.webp 1440w, assets/optimized/hero-first-dance-1672.webp 1672w" sizes="(max-width: 700px) 180vw, 100vw" alt="Krishna and his dance partner in their original Salsa pose, against an ivory studio background" width="1672" height="941" fetchpriority="high" decoding="async">
       <div class="hero-blend" aria-hidden="true"></div>
-      <div class="container hero-container"><div class="hero-copy"><p class="eyebrow">Weekend group classes · Sector 53, Gurugram</p><h1 id="hero-title">Salsa &amp; Bachata<br>classes in<br><em>Gurgaon.</em></h1><p class="hero-intro">Learn Salsa and Bachata from the basics in weekend group classes for adults and working professionals. Our studio is in Sector 53, DLF Phase 5, near Golf Course Road. Beginners can join without a partner.</p><div class="hero-actions"><a class="button" href="https://wa.me/919599353649?text=Hi%20Krishna!%20I'm%20interested%20in%20Salsa%20and%20Bachata%20classes%20in%20Gurgaon.%20Please%20share%20the%20current%20batch%20timings%2C%20course%20fees%20and%20how%20to%20join." target="_blank" rel="noopener noreferrer">Get class timings &amp; fees <span aria-hidden="true">↗</span></a><a class="quiet-link" href="#classes">See what you’ll learn <span aria-hidden="true">↓</span></a></div><p class="microcopy">Message Krishna for current batch timings, course fees and joining details.</p></div></div>
+      <div class="container hero-container"><div class="hero-copy"><nav class="breadcrumb-nav" aria-label="Breadcrumb"><ol class="breadcrumb-list"><li><a href="https://krishnadancefactory.in/">Home</a></li><li aria-hidden="true">/</li><li aria-current="page">Salsa &amp; Bachata Classes</li></ol></nav><p class="eyebrow">Weekend group classes · Sector 53, Gurugram</p><h1 id="hero-title">Salsa &amp; Bachata<br>classes in<br><em>Gurgaon.</em></h1><p class="hero-intro">Learn Salsa and Bachata from the basics in weekend group classes for adults and working professionals. Our studio is in Sector 53, DLF Phase 5, near Golf Course Road. Beginners can join without a partner.</p><div class="hero-actions"><a class="button" href="https://wa.me/919599353649?text=Hi%20Krishna!%20I'm%20interested%20in%20Salsa%20and%20Bachata%20classes%20in%20Gurgaon.%20Please%20share%20the%20current%20batch%20timings%2C%20course%20fees%20and%20how%20to%20join." target="_blank" rel="noopener noreferrer">Get class timings &amp; fees <span aria-hidden="true">↗</span></a><a class="quiet-link" href="#classes">See what you’ll learn <span aria-hidden="true">↓</span></a></div><p class="microcopy">Message Krishna for current batch timings, course fees and joining details.</p></div></div>
     </section>
 
     <section class="welcome-strip dark-section" aria-label="What to expect"><div class="container welcome-inner"><p>Learn Salsa &amp; Bachata<br><em>from the basics.</em></p><div class="welcome-points"><span><b>Beginner batches</b>No dance experience needed</span><span><b>No partner needed</b>Join on your own</span><span><b>Weekend classes</b>Saturday &amp; Sunday batches</span></div></div></section>
