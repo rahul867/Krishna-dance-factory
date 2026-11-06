@@ -1,5 +1,4 @@
-/* The contact bar is intentionally available on desktop too. Reserve its height
-   at the document end so the final footer links can scroll clear of it. */
+/* Desktop has no fixed contact bar, so it needs no bottom clearance. */
 @media (min-width:701px) {
-  body { padding-bottom:calc(52px + env(safe-area-inset-bottom,0px)); }
+  body { padding-bottom:0; }
 }

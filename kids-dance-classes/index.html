@@ -26,25 +26,9 @@
 <link href="assets/optimized/kdf-logo-192.webp" rel="icon" type="image/webp"/>
 <link as="image" fetchpriority="high" href="assets/optimized/kids-class-hero-selected-1860.webp" imagesizes="(max-width: 700px) 160vw, 100vw" imagesrcset="assets/optimized/kids-class-hero-selected-640.webp 640w, assets/optimized/kids-class-hero-selected-960.webp 960w, assets/optimized/kids-class-hero-selected-1440.webp 1440w, assets/optimized/kids-class-hero-selected-1860.webp 1860w" rel="preload" type="image/webp"/>
 <link href="styles.css" rel="stylesheet"/>
-<!-- Preserve production analytics; local and staging previews do not send data. -->
-<script>
-    (function () {
-      if (location.protocol !== 'https:' || !['krishnadancefactory.in', 'www.krishnadancefactory.in'].includes(location.hostname)) return;
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
-      window.gtag('js', new Date());
-      window.gtag('config', 'G-9EC735TX9M');
-      var analytics = document.createElement('script');
-      analytics.async = true;
-      analytics.src = 'https://www.googletagmanager.com/gtag/js?id=G-9EC735TX9M';
-      document.head.appendChild(analytics);
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window,document,'clarity','script','yuydpk0804');
-    })();
-  </script>
+<!-- Shared production tracking; local and staging previews do not send data. -->
+<link rel="stylesheet" href="/privacy.css">
+<script src="/tracking.js"></script>
 <script defer="" src="script.js"></script>
 <script type="application/ld+json">
 {
@@ -310,7 +294,8 @@
 }
 </script>
 <link href="../contact-clearance.css" rel="stylesheet"/>
-<link href="hero.css" rel="stylesheet"/></head>
+<link href="hero.css" rel="stylesheet"/>
+</head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -705,6 +690,7 @@
 <span>© 2026 Krishna Dance Factory</span>
 <a href="#top">Back to top ↑</a>
 </div>
+<div class="kdf-privacy-links"><a href="/privacy-policy/">Privacy Policy</a><button type="button" data-cookie-preferences>Cookie preferences</button></div>
 </footer>
 <!-- ============ MOBILE STICKY CONTACT BAR ============ -->
 <div aria-label="Contact Krishna for kids classes" class="mobile-contact">

@@ -158,7 +158,7 @@
 
 /* Mobile Bottom Sticky Bar */
 .mobile-contact {
-  display: flex;
+  display: none;
   position: fixed;
   inset: auto 0 0;
   z-index: 80;
@@ -316,4 +316,9 @@
   .age-card {
     padding: 26px 20px;
   }
+}
+
+/* Bottom contact actions are only shown on mobile-sized screens. */
+@media (max-width: 700px) {
+  .mobile-contact { display: flex; }
 }
