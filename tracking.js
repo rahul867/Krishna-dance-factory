@@ -18,7 +18,7 @@
   } catch (_) { /* Missing or blocked storage leaves optional tracking off. */ }
   const ids = {
     ga4: 'G-9EC735TX9M',
-    clarity: 'yuydpk0804',
+    clarity: 'yuy9ozgueq',
     meta: '2382786972494968'
   };
 
